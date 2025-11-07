@@ -1,0 +1,149 @@
+﻿:root {
+    --color-principal-hover-botones: #A04077; /* Color principal rosa oscuro hover botones de marca */
+    --color-principal-oscuro: #B54885; /* Color principal rosa oscuro de marca */
+    --color-acento: #FFD6EB; /* Rosa pastel claro */
+    --color-dorado: #E8C495; /* Acento dorado */
+    --color-fondo: #FFF8F9; /* Fondo casi blanco cálido */
+    --color-texto-oscuro: #2C2C2C; /* Texto principal oscuro */
+    --color-texto-claro: #FFFFFF; /* Texto claro */
+    --sombra-suave: rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background-color: var(--color-principal-oscuro);
+    color: var(--color-texto-claro);
+    border-color: var(--color-principal-oscuro);
+}
+
+    .btn-primary:hover {
+        background-color: var(--color-principal-hover-botones);
+        color: var(--color-texto-claro);
+        border-color: var(--color-principal-hover-botones);
+    }
+
+.btn-modificar {
+    background-color: var(--color-principal-oscuro);
+    color: var(--color-texto-claro);
+}
+
+    .btn-modificar:hover {
+        background-color: var(--color-principal-hover-botones);
+        color: var(--color-texto-claro);
+    }
+
+.btn-inactivar {
+    background-color: #DC3545;
+    color: var(--color-texto-claro);
+}
+
+    .btn-inactivar:hover {
+        background-color: #BB2D3B;
+        color: var(--color-texto-claro);
+    }
+
+.btn-activar {
+    background-color: #28A745; /* verde */
+    color: var(--color-texto-claro);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+    .btn-activar:hover {
+        background-color: #218838;
+        color: var(--color-texto-claro);
+    }
+
+/* Botones refinados */
+.btn-outline-dark-pink {
+    --bs-btn-color: var(--color-principal-oscuro);
+    --bs-btn-border-color: var(--color-principal-oscuro);
+    --bs-btn-hover-color: var(--color-texto-claro);
+    --bs-btn-hover-bg: var(--color-principal-hover-botones);
+    --bs-btn-hover-border-color: var(--color-principal-hover-botones);
+    --bs-btn-active-bg: var(--color-principal-oscuro);
+    --bs-btn-active-border-color: var(--color-principal-oscuro);
+    border: 2px solid var(--color-principal-oscuro);
+    color: var(--color-principal-oscuro);
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+    .btn-outline-dark-pink:hover {
+        background: var(--color-principal-hover-botones);
+        color: var(--color-texto-claro);
+        box-shadow: 0 5px 15px rgba(255, 179, 198, 0.3);
+        transform: translateY(-3px);
+    }
+
+    .btn-outline-dark-pink.active {
+        background-color: var(--color-principal-oscuro) !important;
+        color: var(--color-texto-claro) !important;
+    }
+
+.btn-sm {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.btn {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.btn-custom-pink {
+    background-color: var(--color-principal-oscuro);
+    color: var(--color-texto-claro);
+    border: none;
+}
+
+    .btn-custom-pink:hover {
+        background-color: var(--color-principal-hover-botones);
+        color: var(--color-texto-claro);
+    }
+
+.btn-group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    gap: 8px;
+}
+
+.switch-label {
+    flex: 1 1 0;
+    text-align: center;
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    min-height: 48px;
+}
+
+@media (max-width: 480px) {
+    .btn-group {
+        gap: 4px;
+    }
+
+    .switch-label {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.5rem;
+    }
+}
+
+.switch-label[for="registerSwitch"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 48px;
+    white-space: normal;
+}
+
+

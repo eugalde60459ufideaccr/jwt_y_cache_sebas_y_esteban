@@ -1,0 +1,119 @@
+﻿﻿@{
+    ViewData["Title"] = "Gestión de Pedidos";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/Templates/css/pedidos.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/botones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/tablas.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/paginaciones_y_exportaciones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/selects.css")" rel="stylesheet" />
+}
+
+<div class="container-fluid">
+    <div class="card shadow p-4">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4><i class="fas fa-clipboard-list me-2"></i> Gestionar Pedidos</h4>
+                <div>
+                    <button id="refreshBtn" class="btn btn-sm btn-light">
+                        <i class="fas fa-sync-alt me-1"></i> Actualizar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <div class="px-3">
+                <!-- Filtros avanzados -->
+                <div class="row mb-3 g-3">
+                    <div class="col-md-3">
+                        <label class="form-label">Fecha Inicio</label>
+                        <div class="custom-datepicker" data-input="fechaInicio">
+                            <div class="datepicker-input">
+                                <i class="fas fa-calendar-days calendar-icon"></i>
+                            </div>
+                            <div class="datepicker-calendar"></div>
+                        </div>
+                        <input type="text" class="form-control" id="fechaInicio" style="display:none;">
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <label class="form-label">Fecha Fin</label>
+                        <div class="custom-datepicker" data-input="fechaFin">
+                            <div class="datepicker-input">
+                                <i class="fas fa-calendar-days calendar-icon"></i>
+                            </div>
+                            <div class="datepicker-calendar"></div>
+                        </div>
+                        <input type="text" class="form-control" id="fechaFin" style="display:none;">
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="form-label">Método Pago</label>
+                        <select class="form-select filtro-select" id="metodoPago">
+                            <option value="">Todos</option>
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Tarjeta">Tarjeta</option>
+                            <option value="Sinpe">Sinpe Móvil</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- Filtros rápidos por estado -->
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <button class="btn btn-sm btn-outline-secondary filter-btn active" data-estado="">Todos</button>
+                    <button class="btn btn-sm btn-outline-warning filter-btn" data-estado="Pendiente">Pendientes</button>
+                    <button class="btn btn-sm btn-outline-info filter-btn" data-estado="En preparación">En preparación</button>
+                    <button class="btn btn-sm btn-outline-success filter-btn" data-estado="Listo">Listos</button>
+                    <button class="btn btn-sm btn-outline-primary filter-btn" data-estado="Entregado">Entregados</button>
+                    <button class="btn btn-sm btn-outline-danger filter-btn" data-estado="Cancelado">Cancelados</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Tabla de pedidos -->
+        <div class="table-responsive">
+            <table id="tablaGestionarPedidos" class="table mb-0 table-bordered table-striped tabla-global text-center dataTable con-exportaciones no-auto-dt" data-page-length="5">
+                <thead class="tabla-global">
+                    <tr>
+                        <th>N° Pedido</th>
+                        <th>ID Cliente</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Productos</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                        <th>Método Pago</th>
+                        <th>Para Llevar</th>
+                        <th>Tiempo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="pedidosBody" class="tabla-global">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
+    <script src="~/Templates/js/paginaciones_y_exportaciones.js"></script>
+    <script src="~/Templates/js/gestionPedidos.js"></script>
+    <script src="~/Templates/js/selects.js"></script>
+}

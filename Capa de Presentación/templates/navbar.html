@@ -1,0 +1,98 @@
+<!-- Ícono dinámico -->
+<div id="iconElement" class="icon-class"></div>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/logo.png" alt="Logo" class="logo-navbar">
+      <span style="font-family: 'Sono', sans-serif;">Creando Recuerdos</span>
+    </a>
+
+    <!-- Botón de colapso -->
+    <button class="navbar-toggler" id="navbarToggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Opciones del menú -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-uppercase" href="index.html">Inicio</a></li>
+
+        <!-- Insumos dropdown menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-uppercase" href="#" id="dropdownInsumos" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Insumos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownInsumos" style="background-color: #3333;">
+            <li><a class="dropdown-item" href="costos_recetas.html">Costos de Recetas</a></li>
+            <li><a class="dropdown-item" href="empaques.html">Empaques y/o Decoraciones</a></li>
+            <li><a class="dropdown-item" href="materias_primas.html">Materias Primas</a></li>
+            <li><a class="dropdown-item" href="productos_preparados.html">Productos Preparados</a></li>
+            <li><a class="dropdown-item" href="precio_final.html">Precios Finales Sugeridos de Productos Finales</a>
+            </li>
+            <li><a class="dropdown-item" href="suministros.html">Suministros de Limpieza</a></li>
+          </ul>
+        </li>
+
+        <!-- Clientes section -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-uppercase" href="#" id="dropdownClientes" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Clientes
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownClientes" style="background-color: #3333;">
+            <li><a class="dropdown-item" href="menu.html">Menú</a></li>
+            <li><a class="dropdown-item" href="pedidos.html">Pedidos</a></li>
+          </ul>
+        </li>
+
+        <!-- Admin section -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-uppercase" href="#" id="dropdownAdmin" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownAdmin" style="background-color: #3333;">
+            <li><a class="dropdown-item" href="admin_clientes.html">Clientes Admin</a></li>
+            <li><a class="dropdown-item" href="empleados.html">Empleados</a></li>
+            <li><a class="dropdown-item" href="gestionar_pedidos.html">Gestionar Pedidos</a></li>
+            <li><a class="dropdown-item" href="registro_ventas.html">Gestión Ventas</a></li>
+            <li><a class="dropdown-item" href="historial_ventas.html">Historial Ventas</a></li>
+            <li><a class="dropdown-item" href="reportes.html">Reportes</a></li>
+        </li>
+        <li><a class="dropdown-item" href="menu_admin.html">Menú Admin</a></li>
+      </ul>
+      </li>
+
+      <!-- General links -->
+      <li class="nav-item"><a class="nav-link text-uppercase" href="registro_usuarios.html">Registrarse</a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</nav>
+
+
+<style>
+  .navbar-nav .nav-item .nav-link {
+    text-transform: uppercase;
+  }
+
+  .dropdown-menu .dropdown-item {
+    background-color: #2d2d2d;
+    color: white;
+  }
+
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #575757;
+    /* Cambiar color de fondo al pasar el mouse */
+    color: #fff;
+  }
+
+  .navbar-nav .nav-item:hover .nav-link,
+  .navbar-nav .nav-item.active .nav-link {
+    color: #fff !important;
+  }
+</style>

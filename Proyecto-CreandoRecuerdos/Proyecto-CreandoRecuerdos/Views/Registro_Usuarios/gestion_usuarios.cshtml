@@ -1,0 +1,210 @@
+﻿@model List<Proyecto_CreandoRecuerdos.Models.UsuarioModel>
+
+@{
+    ViewData["Title"] = "Gestión de Usuarios";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="@Url.Content("~/Templates/css/gestion_usuarios.css")" />
+    <link href="@Url.Content("~/Templates/css/botones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/tablas.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/selects.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/paginaciones_y_exportaciones.css")" rel="stylesheet" />
+}
+
+<div class="container usuarios-container py-5">
+
+    <h4><strong>Búsqueda de Usuarios</strong></h4>
+    <form method="get" action="@Url.Action("gestion_usuarios", "Registro_Usuarios")" class="mt-4">
+        <div class="d-flex align-items-center mb-4" style="gap: 12px;">
+            <input type="text" name="search" class="form-control" placeholder="Buscar por cualquier campo..." value="@ViewBag.Search" style="max-width: 60%;" />
+            <div class="d-flex align-items-center" style="min-width: 320px;">
+                <div class="custom-datepicker" data-input="FechaBusqueda">
+                    <div class="datepicker-input">
+                        Seleccionar fecha
+                        <i class="fas fa-calendar-days calendar-icon"></i>
+                    </div>
+                    <div class="datepicker-calendar"></div>
+                </div>
+                <input type="hidden" id="FechaBusqueda" name="fecha" value="@ViewBag.Fecha" class="form-control" />
+            </div>
+            <button type="submit" class="fas fa-search btn btn-custom-pink" title="Buscar" style="height: 40px;"></button>
+        </div>
+    </form>
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0" style="color: var(--texto-oscuro);">Gestión de Usuarios</h2>
+        <a href="@Url.Action("registro_usuarios", "Registro_Usuarios")" class="btn btn-primary">
+            <i class="fa fa-plus-circle"></i> Nuevo Usuario
+        </a>
+    </div>
+
+    <div class="card shadow-sm" style="border-radius: 15px; border: none;">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+
+                <table id="tabla_usuarios" class="table usuarios-table mb-0 table-bordered table-striped tabla-global text-center dataTable" data-page-length="8">
+                    <thead class="tabla-global">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Rol</th>
+                            <th>Correo</th>
+                            <th>Fecha Creación</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabla-global">
+                        @foreach (var usuario in Model)
+                        {
+                            <tr>
+                                <td>@usuario.id</td>
+                                <td>@usuario.nombre</td>
+                                <td>
+                                    @if (usuario.id_rol == 1)
+                                    {
+                                        <span class="badge bg-admin">Administrador</span>
+                                    }
+                                    else if (usuario.id_rol == 2)
+                                    {
+                                        <span class="badge bg-trabajador">Trabajador</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-usuario">Usuario</span>
+                                    }
+                                </td>
+                                <td>@usuario.correo</td>
+                                <td>@usuario.fecha_creacion.ToString("dd/MM/yyyy")</td>
+                                <td>
+                                    @if (usuario.activo)
+                                    {
+                                        <span class="badge bg-activo">Activo</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-inactivo">Inactivo</span>
+                                    }
+                                </td>
+                                <td>
+                                    <div class="d-flex gap-2 acciones-usuario">
+                                        <form action="@Url.Action("editar_usuario", "Registro_Usuarios")" style="display:inline;">
+                                            <input type="hidden" name="id" value="@usuario.id" />
+                                            <button type="submit" class="btn btn-sm btn-modificar" title="Editar">
+                                                <i class="fas fa-pencil"></i>
+                                            </button>
+                                        </form>
+
+                                        @if (usuario.activo)
+                                        {
+                                            <button type="button" class="btn btn-sm btn-inactivar inactivar-btn" title="Inactivar" data-id="@usuario.id">
+                                                <i class="fas fa-user-slash"></i>
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <button type="button" class="btn btn-sm btn-activar activar-btn" title="Activar" data-id="@usuario.id">
+                                                <i class="fas fa-user-check"></i>
+                                            </button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js" defer></script>
+    <script src="@Url.Content("~/Templates/js/paginaciones_y_exportaciones.js")" defer></script>
+    <script src="@Url.Content("~/Templates/js/selects.js")" defer></script>
+    <script>
+        $(document).ready(function () {
+            $('.inactivar-btn').click(function () {
+                var id_usuario = $(this).data('id');
+
+                $.ajax({
+                    url: '@Url.Action("inactivar_usuarios", "Registro_Usuarios")',
+                    type: 'POST',
+                    data: { id: id_usuario },
+                    success: function (response) {
+                        if (response.success) {
+                            Swal.fire({
+                            iconHtml: '<i class="fas fa-lock"></i>',
+                            customClass: {
+                                icon: 'swal2-icon-custom'
+                            },
+                            title: '¡Usuario inactivado!',
+                            text: 'Se inactivó el usuario correctamente.',
+                                confirmButtonColor: '#B54885', // rosa principal oscuro
+                            showConfirmButton: true
+                        }).then(() => {
+                            location.reload();
+                        });
+                        } else {
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                                text: 'Ocurrió un error al inactivar el usuario.'
+                            });
+                        }
+                    },
+                    error: function () {
+                        Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                            text: 'Error en la solicitud AJAX.'
+                        });
+                    }
+                });
+            });
+
+        //Activar
+        $('.activar-btn').click(function () {
+            var id_usuario = $(this).data('id');
+
+            $.ajax({
+                url: '@Url.Action("activar_usuarios", "Registro_Usuarios")',
+                type: 'POST',
+                data: { id: id_usuario },
+                success: function (response) {
+                    if (response.success) {
+                        Swal.fire({
+                            iconHtml: '<i class="fas fa-unlock"></i>',
+                            customClass: {
+                                icon: 'swal2-icon-custom'
+                            },
+                            title: '¡Usuario activado!',
+                            text: 'El usuario se activó correctamente.',
+                            confirmButtonColor: '#CC8FAE',
+                            showConfirmButton: true
+                        }).then(() => {
+                            location.reload();
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Ocurrió un error al activar el usuario.'
+                        });
+                    }
+                },
+                error: function () {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Error en la solicitud AJAX.'
+                    });
+                }
+            });
+        }); 
+    });
+    </script>
+}
+

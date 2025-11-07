@@ -1,0 +1,97 @@
+﻿:root {
+    --color-principal-hover: #CC8FAE; /* Color principal rosa oscuro hover de marca */
+    --color-principal-oscuro: #B54885; /* Color principal rosa oscuro de marca */
+    --color-acento: #FFD6EB; /* Rosa pastel claro */
+    --color-dorado: #E8C495; /* Acento dorado */
+    --color-fondo: #FFF8F9; /* Fondo casi blanco cálido */
+    --color-texto-oscuro: #2C2C2C; /* Texto principal oscuro */
+    --color-texto-claro: #FFFFFF; /* Texto claro */
+    --sombra-suave: rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos base */
+body {
+    font-family: 'Sono', sans-serif;
+    background-color: var(--color-fondo);
+}
+
+.swal2-icon-custom {
+    font-size: 35px;
+    color: var(--color-principal-oscuro);
+}
+
+.container {
+    padding: 0 15px;
+}
+
+/* Estilos para la tabla */
+.usuarios-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Estilos para los badges */
+.badge {
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 600;
+    border-radius: 50rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.bg-admin {
+    background-color: var(--color-principal-oscuro);
+    color: #FFFFFF;
+}
+
+.bg-trabajador {
+    background-color: var(--color-dorado);
+    color: var(--texto-oscuro);
+}
+
+.bg-activo {
+    background-color: #28A745;
+    color: #FFFFFF;
+}
+
+.bg-usuario {
+    background-color: coral;
+    color: var(--color-texto);
+}
+
+
+.bg-inactivo {
+    background-color: #6c757d;
+    color: #FFFFFF;
+}
+
+/* Estilos para los botones de acción */
+.acciones-usuario {
+    display: flex;
+    gap: 0.5rem;
+}
+
+    .acciones-usuario .btn {
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+@media (max-width: 768px) {
+    .usuarios-container {
+        padding: 0;
+    }
+
+    .card {
+        border-radius: 0;
+    }
+}
+
+

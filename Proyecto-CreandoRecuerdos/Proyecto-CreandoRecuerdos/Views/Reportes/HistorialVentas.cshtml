@@ -1,0 +1,214 @@
+﻿﻿@model List<Proyecto_CreandoRecuerdos.ViewModels.HistorialVentasViewModel>
+
+@{
+    ViewData["Title"] = "Historial de Ventas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var cr = new System.Globalization.CultureInfo("es-CR");
+    cr.NumberFormat.CurrencySymbol = "₡";
+    cr.NumberFormat.CurrencyPositivePattern = 0;
+    cr.NumberFormat.CurrencyDecimalSeparator = ".";
+    cr.NumberFormat.CurrencyGroupSeparator = ",";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/Templates/css/botones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/tablas.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/paginaciones_y_exportaciones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/selects.css")" rel="stylesheet" />
+}
+
+<h2>📊 Historial de Ventas</h2>
+
+<form method="get" action="@Url.Action("HistorialVentas", "Reportes")" class="mb-3">
+    <div class="row">
+        <div class="col">
+            <label>Fecha Inicio:</label>
+            <div class="custom-datepicker" data-input="fi">
+                <div class="datepicker-input">
+                    <span class="datepicker-label">Seleccionar fecha de inicio</span>
+                    <i class="fas fa-calendar-days calendar-icon"></i>
+                </div>
+                <div class="datepicker-calendar"></div>
+            </div>
+            <input id="fi" type="hidden" name="fechaInicio" class="form-control" value="@ViewBag.FechaInicio" autocomplete="off" />
+        </div>
+
+        <div class="col">
+            <label>Fecha Fin:</label>
+            <div class="custom-datepicker" data-input="ff">
+                <div class="datepicker-input">
+                    <span class="datepicker-label">Seleccionar fecha final</span>
+                    <i class="fas fa-calendar-days calendar-icon"></i>
+                </div>
+                <div class="datepicker-calendar"></div>
+            </div>
+            <input id="ff" type="hidden" name="fechaFin" class="form-control" value="@ViewBag.FechaFin" autocomplete="off" />
+        </div>
+
+        <div class="col d-flex align-items-end">
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+        </div>
+    </div>
+</form>
+
+<div class="mb-3">
+    <a href="@Url.Action("ExportarHistorialVentas", "Reportes", new { formato = "PDF", fechaInicio = ViewBag.FechaInicio, fechaFin = ViewBag.FechaFin })" class="btn btn-danger">Exportar PDF</a>
+    <a href="@Url.Action("ExportarHistorialVentas", "Reportes", new { formato = "EXCEL", fechaInicio = ViewBag.FechaInicio, fechaFin = ViewBag.FechaFin })" class="btn btn-success">Exportar Excel</a>
+    <a href="@Url.Action("ReportesIndex", "Reportes")" class="btn btn-secondary">Volver</a>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table mb-0 table-bordered table-striped tabla-global text-center dataTable con-busqueda" data-page-length="3">
+        <thead>
+            <tr>
+                <th>ID Venta</th>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Cliente</th>
+                <th>Vendedor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var v in Model.OrderBy(v => v.Fecha))
+            {
+                <tr>
+                    <td>@v.IdVenta</td>
+                    <td>@v.Fecha.ToString("dd-MM-yyyy")</td>
+                    <td>@v.Total.ToString("C", cr)</td>
+                    <td>@(v.Cliente ?? "N/A")</td>
+                    <td>@(v.Usuario ?? "N/A")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No se encontraron ventas en el rango de fechas indicado.</p>
+}
+
+<hr />
+<h4>Ventas por Día (según filtro)</h4>
+<canvas id="ventasDiaChart" height="110"></canvas>
+
+<hr class="my-4" />
+<h4>Ventas por Mes (según filtro)</h4>
+<canvas id="ventasMesChart" height="110"></canvas>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlMes = '@Url.Action("VentasPorMes","Reportes")';
+        const urlDia = '@Url.Action("VentasPorDia","Reportes")';
+
+        const $fi = document.getElementById('fi');
+        const $ff = document.getElementById('ff');
+
+        const fiVal = $fi?.value || '';
+        const ffVal = $ff?.value || '';
+
+        const moneyCR = n => new Intl.NumberFormat('es-CR', {
+            style: 'currency', currency: 'CRC', minimumFractionDigits: 2
+        }).format(n || 0);
+
+        let chartMes = null;
+        let chartDia = null;
+
+        // --- Ventas por día ---
+        function cargarDiario() {
+            fetch(`${urlDia}?fechaInicio=${encodeURIComponent(fiVal)}&fechaFin=${encodeURIComponent(ffVal)}`, { cache: 'no-store' })
+                .then(r => r.json())
+                .then(data => {
+                    const labels = data.map(x => {
+                        const d = new Date(x.label.split('-').reverse().join('-') + 'T00:00:00');
+                        return d.toLocaleDateString('es-CR', { day: '2-digit', month: '2-digit' });
+                    });
+                    const values = data.map(x => x.total || 0);
+
+                    const canvas = document.getElementById('ventasDiaChart');
+                    if (chartDia) chartDia.destroy();
+                    chartDia = new Chart(canvas.getContext('2d'), {
+                        type: 'line',
+                        data: {
+                            labels,
+                            datasets: [{
+                                label: `Ventas por día`,
+                                data: values,
+                                borderWidth: 2,
+                                tension: .25,
+                                borderColor: '#CC8FAE',
+                                backgroundColor: '#FFE6EE'
+                            }]
+                        },
+                        options: {
+                            animation: false,
+                            plugins: {
+                                tooltip: { callbacks: { label: c => `${c.dataset.label}: ${moneyCR(c.parsed.y)}` } },
+                                legend: { display: true }
+                            },
+                            scales: { y: { ticks: { callback: v => moneyCR(v) } } }
+                        }
+                    });
+                })
+                .catch(console.error);
+        }
+
+        // --- Ventas por mes ---
+        function cargarMensual() {
+            fetch(`${urlMes}?fechaInicio=${encodeURIComponent(fiVal)}&fechaFin=${encodeURIComponent(ffVal)}`, { cache: 'no-store' })
+                .then(r => r.json())
+                .then(data => {
+                    const labels = data.map(x => {
+                        const parts = x.label.split('-');
+                        const yearPart = parseInt(parts[0], 10);
+                        const monthPart = parseInt(parts[1], 10);
+                        const d = new Date(yearPart, monthPart - 1, 1);
+                        return d.toLocaleDateString('es-CR', { month: 'short' }).toUpperCase();
+                    });
+
+                    const values = data.map(x => x.total || 0);
+
+                    const ctxMes = document.getElementById('ventasMesChart').getContext('2d');
+                    if (chartMes) chartMes.destroy();
+                    chartMes = new Chart(ctxMes, {
+                        type: 'bar',
+                        data: {
+                            labels,
+                            datasets: [{
+                                label: `Ventas por mes`,
+                                data: values,
+                                borderWidth: 2,
+                                backgroundColor: '#FFE6EE',
+                                borderColor: '#FF8FAB'
+                            }]
+                        },
+                        options: {
+                            animation: false,
+                            plugins: {
+                                tooltip: { callbacks: { label: c => `${c.dataset.label}: ${moneyCR(c.parsed.y)}` } },
+                                legend: { display: true }
+                            },
+                            scales: { y: { ticks: { callback: v => moneyCR(v) } } }
+                        }
+                    });
+                })
+                .catch(console.error);
+        }
+
+        // --- Solo cargar gráficos si hay filtro aplicado ---
+        if (fiVal && ffVal) {
+            cargarDiario();
+            cargarMensual();
+        }
+    });
+    </script>
+
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js" defer></script>
+    <script src="@Url.Content("~/Templates/js/paginaciones_y_exportaciones.js")" defer></script>
+    <script src="@Url.Content("~/Templates/js/selects.js")" defer></script>
+}

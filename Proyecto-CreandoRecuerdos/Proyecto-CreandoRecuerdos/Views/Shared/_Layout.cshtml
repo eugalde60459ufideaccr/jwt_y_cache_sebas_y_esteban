@@ -1,0 +1,380 @@
+﻿<!DOCTYPE html>
+<html lang="es-CR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creando Recuerdos@((ViewData["Title"] != null ? " - " + ViewData["Title"] : ""))</title>
+
+    <!-- Conexiones anticipadas -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- CSP básica -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'self' 'unsafe-inline' https:; script-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:;" />
+
+    <!-- Fuentes y estilos globales -->
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="@Url.Content("~/Templates/css/estilos.css")" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" media="print" onload="this.media='all'" />
+
+    <!-- Seguridad y compatibilidad -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Creando Recuerdos" />
+
+    <!-- Caché -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- SEO -->
+    <link rel="shortcut icon" href="~/Templates/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/Templates/img/favicon.png" type="image/png">
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- ================= PLACEHOLDER PARA ESTILOS DE VISTAS ESPECÍFICAS ================= -->
+    @RenderSection("Styles", required: false)
+</head>
+
+<body data-error-message="@ViewBag.ErrorMessage" data-success-message="@TempData["SuccessMessage"]">
+
+    @using System.Security.Claims
+    @{
+        var user = User as ClaimsPrincipal;
+        var nombre = user?.FindFirst(ClaimTypes.Name)?.Value;
+        var rol = user?.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
+        var id = user?.FindFirst("IdUsuario")?.Value;
+        // Si no hay autenticación, asumimos invitado
+        if (!User.Identity.IsAuthenticated)
+        {
+            nombre = "Invitado";
+            rol = null; // null = Invitado, 1 = Admin, 2 = Empleado
+        }
+    }
+
+    <div style="background:#222; color:#0f0; padding:10px; font-family:monospace;">
+        <p><strong>DEBUG JWT</strong></p>
+        <p>Nombre: @nombre</p>
+        <p>Rol: @rol</p>
+        <p>ID: @id</p>
+        <p>¿User.Identity.IsAuthenticated?: @(User?.Identity?.IsAuthenticated ?? false)</p>
+    </div>
+
+
+    <div id="container-wrap2">
+        <div id="iconElement" class="icon-class"></div>
+
+        <!-- Navbar -->
+        @{
+            string navClass = "navbar navbar-expand-lg navbar-dark";
+            if (rol == "1")
+            {
+                navClass += " admin-session";
+            }
+
+            if (rol == "2")
+            {
+                navClass += " empleado-session";
+            }
+        }
+        <nav id="navbar" class="@navClass">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="@Url.Action("Inicio", "inicio")">
+                    <img src="@Url.Content("~/Templates/img/logo.png")"
+                         alt="Logo"
+                         class="logo-navbar">
+                    <span style="font-family: 'Sono', sans-serif;">Creando Recuerdos</span>
+                </a>
+
+                <button class="navbar-toggler" id="navbarToggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        @if (rol == null || rol == "1" || rol == "2")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" asp-controller="Home" href="@Url.Action("Inicio", "inicio")" asp-action="Index">Inicio</a>
+                            </li>
+
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-uppercase" href="#" id="dropdownClientes" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Clientes
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownClientes">
+                                    <li><a class="dropdown-item" asp-controller="Menu" href="@Url.Action("Menu", "menu")" asp-action="Index">Menú</a></li>
+
+                                    <li><a class="dropdown-item" asp-controller="Pedidos" href="@Url.Action("Pedidos", "Pedidos")" asp-action="Index">Pedidos</a></li>
+
+                                    <li><a class="dropdown-item" asp-controller="Pedidos" href="@Url.Action("MisPedidos", "Pedidos")" asp-action="MisPedidos">Mis Pedidos</a></li>
+                                </ul>
+                            </li>
+                        }
+
+                        @if (rol == "1")
+                        {
+                            <!-- Botones visibles solo para admin -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-uppercase" href="#" id="dropdownInsumos" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Insumos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownInsumos">
+                                    <li><a class="dropdown-item" href="@Url.Action("materias_primas", "Insumos")">Materias Primas</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("productos_preparados", "Insumos")">Productos Preparados</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("empaques_decoraciones", "Insumos")">Empaques y/o Decoraciones</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("implementos", "Insumos")">Implementos</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("suministros", "Insumos")">Suministros</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("costos_recetas", "Insumos")">Costos de Recetas</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("precios_finales_sugeridos", "Insumos")">Precios Finales Sugeridos</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-uppercase" href="#" id="dropdownAdmin" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Admin
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownAdmin">
+                                    <li><a class="dropdown-item" asp-controller="gestion" href="@Url.Action("gestion_usuarios", "Registro_Usuarios")" asp-action="Gestionar">Gestión de usuariossss</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("Empleados", "Empleados")">Empleados</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="@Url.Action("GestionSolicitudesAusencias", "Ausencias")">
+                                            Gestión de Solicitudes de Ausencias
+                                        </a>
+                                    </li>
+                                    <li><a class="dropdown-item" asp-controller="Pedidos" href="@Url.Action("Gestionar", "Pedidos")">Gestión de Pedidos</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Pedidos" href="@Url.Action("RegistroVentas", "Pedidos")">Gestión de Ventas</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("HistorialActividades", "Admin")">Historial de Actividades</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("ReportesIndex", "Reportes")">Reportes</a></li>
+                                    <li><a class="dropdown-item" href="@Url.Action("menu_admin", "Menu")">Menú Admin</a></li>
+                                </ul>
+                            </li>
+                            <!-- Botones visibles solo para admin -->
+                        }
+
+                        <!-- Botones visibles solo para empleados -->
+                        @if (rol == "2")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="@Url.Action("SolicitudAusencia", "Ausencias")">
+                                    Solicitud de Ausencia
+                                </a>
+                            </li>
+                        }
+                        <!-- Botones visibles solo para empleados -->
+
+                        @if (rol == null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="@Url.Action("iniciar_sesion", "Registro_Usuarios")">Registrarse</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item dropdown position-relative">
+                                <a class="nav-link dropdown-toggle text-uppercase" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Perfil: @nombre
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="userDropdown" style="min-width: 200px;">
+                                    <li>
+                                        <a class="dropdown-item">Perfil: @nombre</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item text-danger" href="@Url.Action("logout", "Registro_Usuarios")">Cerrar Sesión</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+
+
+                        <!-- Boton visible solo para admin -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contenido principal -->
+        <div id="container-wrap">
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+            @RenderSection("ListadoInsumos", required: false)
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer text-white pt-5 pb-3">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <h3 class="text-uppercase mb-4" style="font-family: 'Sono';">
+                            <i class="fas fa-map-marker-alt me-2 dark-pink"></i> Contacto
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-phone me-2 dark-pink"></i> +506 8888-8888</li>
+                            <li class="mb-2"><i class="fas fa-envelope me-2 dark-pink"></i> info@creandorecuerdos.com</li>
+                            <li><i class="fas fa-clock me-2 dark-pink"></i> Lunes a Sábado: 7am - 9pm</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h3 class="text-uppercase mb-4" style="font-family: 'Sono', sans-serif;">
+                            <i class="fas fa-hashtag me-2 dark-pink"></i> Síguenos
+                        </h3>
+                        <div class="social-icons">
+                            <a href="#" class="text-white mx-2" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg dark-pink"></i></a>
+                            <a href="#" class="text-white mx-2" aria-label="Instagram"><i class="fab fa-instagram fa-lg dark-pink"></i></a>
+                            <a href="#" class="text-white mx-2" aria-label="WhatsApp"><i class="fab fa-whatsapp fa-lg dark-pink"></i></a>
+                        </div>
+                        <div class="mt-4">
+                            <img src="@Url.Content("~/Templates/img/logo.png")"
+                                 alt="Logo"
+                                 style="max-height: 80px; width: auto; background-color: #FFFFFF; border-radius: 8px;">
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-uppercase mb-4" style="font-family: 'Sono', sans-serif;">
+                            <i class="fas fa-link me-2 dark-pink"></i> Enlaces
+                        </h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a asp-controller="Pedidos" asp-action="Create" class="text-white text-decoration-none">Nuevo Pedido</a></li>
+                            <li class="mb-2"><a asp-controller="Menu" asp-action="Index" class="text-white text-decoration-none">Nuestro Menú</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="mt-4 mb-3" style="border-color: rgba(0,0,0,0.1);">
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="m-0 small">
+                            Copyright &copy; @DateTime.Now.Year Creando Recuerdos |
+                            <a href="#" class="text-white text-decoration-none">Términos y Condiciones</a> |
+                            <a href="#" class="text-white text-decoration-none">Política de Privacidad</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @if (TempData["SweetAlert"] != null)
+    {
+        <script>
+            $(document).ready(function () {
+                var alertData = @Html.Raw(TempData["SweetAlert"]);
+                Swal.fire({
+                    title: alertData.title,
+                    text: alertData.text,
+                    icon: alertData.icon,
+                    timer: alertData.timer,
+                    showConfirmButton: alertData.showConfirmButton,
+                    position: 'top-end',
+                    toast: true
+                });
+            });
+        </script>
+    }
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector(".navbar");
+            const collapse = document.querySelector(".navbar-collapse");
+
+            collapse.addEventListener("show.bs.collapse", () => navbar.classList.add("menu-abierto"));
+            collapse.addEventListener("hide.bs.collapse", () => navbar.classList.remove("menu-abierto"));
+
+            const dropdownMap = {
+                "dropdownClientes": "clientes-section",
+                "dropdownInsumos": "insumos-section",
+                "dropdownAdmin": "admin-section",
+                "userDropdown": "profile-section"
+            };
+
+            function updateBarraTop() {
+                // Busca el dropdown actualmente abierto
+                const openDropdown = document.querySelector('.navbar .dropdown-menu.show');
+                // Elimina todas las clases de sección previas
+                Object.values(dropdownMap).forEach(cls => navbar.classList.remove(cls));
+                if (openDropdown && window.innerWidth <= 992 && navbar.classList.contains("menu-abierto")) {
+                    navbar.classList.add('dropdown-abierto');
+                    // Añade la clase de sección correspondiente
+                    const parentDropdown = openDropdown.closest('.dropdown');
+                    const toggle = parentDropdown ? parentDropdown.querySelector('.dropdown-toggle') : null;
+                    if (toggle && dropdownMap[toggle.id]) {
+                        navbar.classList.add(dropdownMap[toggle.id]);
+                    }
+                    // Calcula la posición de la barra
+                    const rect = openDropdown.getBoundingClientRect();
+                    const offset = rect.bottom - navbar.getBoundingClientRect().top;
+                    navbar.style.setProperty('--barra-top', offset + 'px');
+                } else {
+                    navbar.classList.remove('dropdown-abierto');
+                    navbar.style.removeProperty('--barra-top');
+                }
+            }
+
+            // Escucha ambos eventos en todos los dropdowns
+            document.querySelectorAll('.navbar .dropdown').forEach(function (dropdown) {
+                dropdown.addEventListener('shown.bs.dropdown', updateBarraTop);
+                dropdown.addEventListener('hidden.bs.dropdown', updateBarraTop);
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 992) {
+                    navbar.classList.remove('dropdown-abierto');
+                    Object.values(dropdownMap).forEach(cls => navbar.classList.remove(cls));
+                    navbar.style.removeProperty('--barra-top');
+                } else {
+                    updateBarraTop();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ajaxComplete(function (event, xhr) {
+            const token = xhr.getResponseHeader("X-Renewed-Token");
+            if (token) {
+                localStorage.setItem("jwtToken", token);
+            }
+        });
+
+        // Al hacer peticiones AJAX, siempre envía el token actual:
+        $.ajaxSetup({
+            beforeSend: function (xhr) {
+                const token = localStorage.getItem("jwtToken");
+                if (token) {
+                    xhr.setRequestHeader("Authorization", "Bearer " + token);
+                }
+            }
+        });
+    </script>
+
+    <!-- Scripts globales -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+
+    <!-- ================= SCRIPTS DE VISTAS ESPECÍFICAS ================= -->
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

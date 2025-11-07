@@ -1,0 +1,61 @@
+﻿@model List<Proyecto_CreandoRecuerdos.ViewModels.ProductosDisponiblesViewModel>
+
+@{
+    ViewData["Title"] = "Productos Disponibles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var cr = new System.Globalization.CultureInfo("es-CR");
+    cr.NumberFormat.CurrencySymbol = "₡";
+    cr.NumberFormat.CurrencyPositivePattern = 0;
+    cr.NumberFormat.CurrencyDecimalSeparator = ".";
+    cr.NumberFormat.CurrencyGroupSeparator = ",";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/Templates/css/tablas.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/paginaciones_y_exportaciones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/selects.css")" rel="stylesheet" />
+}
+
+<h2>📦 Productos Disponibles</h2>
+
+<div class="mb-3">
+    <a href="@Url.Action("ExportarProductos", "Reportes", new { formato = "PDF" })" class="btn btn-danger">Exportar PDF</a>
+    <a href="@Url.Action("ExportarProductos", "Reportes", new { formato = "EXCEL" })" class="btn btn-success">Exportar Excel</a>
+    <a href="@Url.Action("ReportesIndex", "Reportes")" class="btn btn-secondary">Volver</a>
+</div>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table mb-0 table-bordered table-striped tabla-global text-center dataTable con-busqueda" data-page-length="3">
+        <thead class="tabla-global">
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio por Unidad</th>
+            </tr>
+        </thead>
+        <tbody class="tabla-global">
+            @foreach (var producto in Model)
+            {
+                <tr>
+                    <td>@producto.Nombre</td>
+                    <td>@producto.Descripcion</td>
+                    <td>@producto.PrecioUnidad.ToString("C", cr)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No se encontraron productos disponibles.</p>
+}
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js" defer></script>
+    <script src="@Url.Content("~/Templates/js/paginaciones_y_exportaciones.js")" defer></script>
+    <script src="@Url.Content("~/Templates/js/selects.js")" defer></script>
+}
+

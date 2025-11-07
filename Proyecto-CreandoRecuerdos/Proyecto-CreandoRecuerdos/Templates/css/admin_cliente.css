@@ -1,0 +1,14 @@
+.status-active {
+    color: #28A745;
+    font-weight: bold;
+}
+
+.status-inactive {
+    color: #DC3545;
+    font-weight: bold;
+}
+
+.action-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}

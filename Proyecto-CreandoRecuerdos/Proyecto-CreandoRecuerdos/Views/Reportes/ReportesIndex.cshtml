@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Panel de Reportes";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/Templates/css/botones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/selects.css")" rel="stylesheet" />
+}
+
+<h2 class="text-center mb-4">Panel de Reportes</h2>
+
+<div class="d-flex flex-column align-items-center gap-3">
+    <a class="btn btn-primary w-75" href="@Url.Action("HistorialVentas", "Reportes")">
+        📊 Historial de Ventas
+    </a>
+
+    <a class="btn btn-primary w-75" href="@Url.Action("VentasMensuales", "Reportes")">
+        📅 Ventas Mensuales
+    </a>
+
+    <a class="btn btn-primary w-75" href="@Url.Action("EmpleadosDisponibles", "Reportes")">
+        👥 Empleados Disponibles
+    </a>
+
+    <a class="btn btn-primary w-75" href="@Url.Action("ProductosDisponibles", "Reportes")">
+        🍽️ Productos del Menú
+    </a>
+
+    <a class="btn btn-primary w-75" href="@Url.Action("CostosOperativos", "Reportes")">
+        💰 Costos Promedios Operativos
+    </a>
+</div>

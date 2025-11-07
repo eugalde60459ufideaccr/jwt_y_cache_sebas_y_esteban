@@ -1,0 +1,106 @@
+﻿@model List<Proyecto_CreandoRecuerdos.base_de_datos.sp_consultar_productos_Result>
+
+@{
+    ViewData["Title"] = "Menú";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/Templates/css/menu.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/botones.css")" rel="stylesheet" />
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <br><br>
+        <h2 style="font-family: 'Sono', sans-serif;">
+            <i class="fas fa-utensils me-2"></i> Categorías
+        </h2>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+            <button class="btn btn-sm btn-outline-dark-pink active" data-category="todos">
+                <i class="fas fa-th-list me-2"></i>Todo
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="recomendaciones">
+                <i class="fas fa-check me-1"></i> Recomendaciones
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="desayunos">
+                <i class="fas fa-coffee me-2"></i>Desayunos
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="panini">
+                <i class="fas fa-bread-slice me-2"></i>Panini
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="crepes">
+                <i class="fas fa-blender me-2"></i>Crêpes
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="pasta">
+                <i class="fas fa-pizza-slice me-2"></i>Pasta
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="arroz">
+                <i class="fas fa-utensils me-2"></i>Arroz
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="tentaciones">
+                <i class="fas fa-apple-alt me-2"></i>Tentaciones
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="postres">
+                <i class="fas fa-ice-cream me-2"></i>Delicias
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="bebidas-calientes">
+                <i class="fas fa-mug-hot me-2"></i>Bebidas Calientes
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="bebidas-frias">
+                <i class="fas fa-glass-whiskey me-2"></i>Bebidas Frías
+            </button>
+            <button class="btn btn-sm btn-outline-dark-pink" data-category="especiales">
+                <i class="fas fa-star me-2"></i>Especiales
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="pos-products">
+    <div class="row justify-content-center">
+        <div class="col-">
+            <div class="row" id="productGrid">
+                <!-- Se llenará -->
+
+                <div class="row" id="product-container">
+                    @foreach (var producto in Model)
+                    {
+                        // Convertimos la categoría a string como antes
+                        var categorias = producto.id_categoria.ToString();
+
+                        // Evaluamos si este producto está en la lista de recomendaciones
+                        bool esRecomendado = ViewBag.ProductosRecomendados != null &&
+                                             ((List<int>)ViewBag.ProductosRecomendados).Contains(producto.id_producto);
+
+                        // Creamos el contenedor del producto con los atributos necesarios
+                        <div class="col-md-4 mb-4"
+                             data-category="@categorias"
+                             data-recomendado="@(esRecomendado.ToString().ToLower())">
+                            <div class="card h-100 border-0 shadow-sm product-card">
+                                <div class="card-img-container">
+                                    <img src='~/Templates/img/menu/@producto.img_url' class="card-img-top" alt="@producto.nombre">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-family: 'Sono', sans-serif;">@producto.nombre</h5>
+                                    <p class="card-text">@producto.descripcion</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="fw-bold dark-violet">₡@producto.precio_por_unidad.ToString("N0")</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+
+                <!-- Fin-->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="@Url.Content("~/Templates/js/menu.js")"></script>
+}

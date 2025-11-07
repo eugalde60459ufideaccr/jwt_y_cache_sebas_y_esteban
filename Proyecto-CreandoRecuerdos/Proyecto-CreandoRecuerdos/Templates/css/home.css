@@ -1,0 +1,182 @@
+﻿/* home.css */
+:root {
+    --color-principal-hover: #CC8FAE; /* Color principal rosa oscuro hover de marca */
+    --color-principal-oscuro: #B54885; /* Color principal rosa oscuro de marca */
+    --color-acento: #FFD6EB; /* Rosa pastel claro */
+    --color-dorado: #E8C495; /* Acento dorado */
+    --color-fondo: #FFF8F9; /* Fondo casi blanco cálido */
+    --color-texto-oscuro: #2C2C2C; /* Texto principal oscuro */
+    --color-texto-claro: #FFFFFF; /* Texto claro */
+    --sombra-suave: rgba(0, 0, 0, 0.15);
+}
+
+/* Estructura principal */
+.hero-section {
+    background: var(--color-fondo);
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--color-acento);
+}
+
+.features-section {
+    background: var(--color-fondo);
+    padding: 5rem 0;
+}
+
+/* Presentación del logo */
+.hero-section .logo-container {
+    max-width: 580px;
+    margin: 0 auto 2rem;
+    padding: 20px;
+    position: relative;
+}
+
+.hero-section img {
+    display: block;
+    margin: 0 auto;
+    /* La siguiente línea evita saltos por carga diferida de imágenes */
+    aspect-ratio: attr(width) / attr(height);
+    height: auto;
+    max-height: 380px;
+    width: auto;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.5s ease;
+}
+
+    .hero-section img:hover {
+        transform: scale(1.05);
+    }
+
+/* Títulos y texto */
+.features-section h2 {
+    color: var(--color-texto);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+    .features-section h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, var(--color-principal), var(--color-dorado));
+    }
+
+/* Tarjetas elegantes */
+.features-section .card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--sombra-suave);
+    height: 100%;
+    position: relative;
+}
+
+.features-section .card-title {
+    color: var(--color-principal-oscuro);
+    font-weight: 600;
+    margin: 1rem 0;
+    letter-spacing: 0.5px;
+}
+
+.features-section .card-text {
+    color: var(--color-texto);
+    min-height: 60px;
+    margin-bottom: 1.5rem;
+}
+
+    .features-section .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(to right, var(--color-principal-oscuro), var(--color-dorado));
+    }
+
+    .features-section .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+.features-section .card-body {
+    padding: 2rem 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.features-section .dark-pink {
+    color: var(--color-principal-oscuro) !important;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.features-section .card:hover .dark-pink {
+    transform: scale(1.1);
+    color: var(--color-principal-oscuro) !important;
+}
+
+/* Decoraciones florales sutiles */
+.floral-decoration {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-section .floral-top-left {
+    top: 20px;
+    left: 20px;
+    width: 120px;
+    height: 120px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23FFB3C6" d="M50 15a35 35 0 1 0 0 70 35 35 0 0 0 0-70zm0 60a25 25 0 1 1 0-50 25 25 0 0 1 0 50z"/><circle fill="%23E8C495" cx="50" cy="50" r="10"/></svg>');
+}
+
+.hero-section .floral-bottom-right {
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23FFB3C6" d="M50 20a30 30 0 1 0 0 60 30 30 0 0 0 0-60zm0 55a25 25 0 1 1 0-50 25 25 0 0 1 0 50z"/><circle fill="%23E8C495" cx="50" cy="50" r="8"/></svg>');
+}
+
+/* Responsive */
+@media (max-width: 768px) and (min-width: 150px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+        .hero-section img {
+            max-height: 140px;
+        }
+
+    .features-section {
+        padding: 3rem 0;
+    }
+
+    .floral-decoration {
+        display: none;
+    }
+}
+
+/* Asegura centrado también en pantallas pequeñas */
+@media (max-width: 600px) {
+    .hero-section img {
+        max-height: 240px;
+    }
+}

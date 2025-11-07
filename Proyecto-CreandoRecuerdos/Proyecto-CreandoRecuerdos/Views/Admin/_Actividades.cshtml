@@ -1,0 +1,37 @@
+﻿@model List<Proyecto_CreandoRecuerdos.Models.ActividadModel>
+@using Newtonsoft.Json
+
+@if (Model != null && Model.Any())
+{
+    <div class="table-responsive">
+        <table class="table mb-0 table-bordered table-striped tabla-global text-center dataTable" data-page-length="3">
+            <thead class="tabla-global">
+                <tr>
+                    <th>Fecha/Hora</th>
+                    <th>Usuario</th>
+                    <th>Acción</th>
+                    <th>Tabla</th>
+
+                </tr>
+            </thead>
+            <tbody class="tabla-global">
+                @foreach (var actividad in Model)
+                {
+                    <tr>
+                        <td>@actividad.FechaHora.ToString("g")</td>
+                        <td>@actividad.NombreUsuario</td>
+                        <td>@actividad.TipoAccion</td>
+                        <td>@actividad.TablaAfectada</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+}
+else
+{
+    <div class="alert alert-info">
+        No se encontraron actividades con los filtros seleccionados.
+    </div>
+}

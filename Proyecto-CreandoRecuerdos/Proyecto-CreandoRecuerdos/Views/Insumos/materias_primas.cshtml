@@ -1,0 +1,205 @@
+@model Proyecto_CreandoRecuerdos.Models.InsumosModel
+
+@{
+    ViewData["Title"] = "Gestión de Costos de Materias Primas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/Templates/css/insumos.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/botones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/tablas.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/paginaciones_y_exportaciones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/validaciones.css")" rel="stylesheet" />
+}
+
+<div class="container my-5 text-center">
+    <h2 class="mb-4" style="font-family: 'Sono';">
+        <i class="fas fa-calculator me-2"></i>Gestión de Costos de Materias Primas
+    </h2>
+</div>
+
+<!-- Formulario de búsqueda-->
+<h4><strong>Búsqueda de Materias Primas</strong></h4>
+<form method="get" action="@Url.Action("materias_primas", "Insumos")" class="mt-4">
+    <div class="input-group mb-4">
+        <input type="text" name="search" class="form-control" placeholder="Buscar por cualquier campo..." value="@ViewBag.Search" />
+        <button type="submit" class=" fas fa-search ms-1 btn btn-custom-pink" title="Buscar"></button>
+    </div>
+</form>
+
+<!-- Formulario de registro/edición -->
+<div id="formMateriaPrimaContainer">
+    @Html.Partial("_FormularioMateriaPrima", Model)
+</div>
+
+@section ListadoInsumos {
+    <!-- Listado -->
+    <div class="tabla_insumos_container">
+        <h4><strong>Listado de Materias Primas</strong></h4>
+        @if (Model.MateriasPrimas == null || Model.MateriasPrimas.Count == 0)
+        {
+            <div class="alert alert-info text-center" style="margin: 1rem 0;">
+                @if (!string.IsNullOrEmpty(ViewBag.Search as string))
+                {
+                    <span>No se encontraron coincidencias.</span>
+                }
+                else
+                {
+                    <span>No hay materias primas registradas.</span>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="table-responsive">
+                <table id="tabla_insumos" class="table mb-0 table-bordered table-striped tabla-global text-center dataTable con-exportaciones" data-page-length="3">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Marca</th>
+                            <th>Presentación</th>
+                            <th>Cantidad</th>
+                            <th>Volumen de Porción de Presentación</th>
+                            <th>Unidad de medida de Presentación</th>
+                            <th>Volumen de Porción Convertido</th>
+                            <th>Unidad de medida del Volumen de Porción Convertido</th>
+                            <th>Proveedor</th>
+                            <th>Costo (₡)</th>
+                            <th>Peso</th>
+                            <th>Unidad de Medida del Peso</th>
+                            <th>Merma Total en Gramos (g)</th>
+                            <th>Costo por gramo (₡/g)</th>
+                            <th>Porcentaje de Merma (%)</th>
+                            <th>Costo de Merma Total(₡)</th>
+                            <th>Costo Total + Merma (₡)</th>
+                            <th>Costo por gramo con merma (₡)</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var materia_prima in Model.MateriasPrimas)
+                        {
+                            <tr>
+                                <td>@materia_prima.id</td>
+                                <td>@materia_prima.nombre</td>
+                                <td>@materia_prima.marca</td>
+                                <td>@materia_prima.presentacion</td>
+                                <td>@materia_prima.cantidad</td>
+                                <td>@(materia_prima.volumen_de_porcion_de_presentacion.HasValue ? materia_prima.volumen_de_porcion_de_presentacion.Value.ToString("N2"): "")</td>
+                                <td>@materia_prima.unidad_de_medida_de_presentacion</td>
+                                <td>@(materia_prima.volumen_de_porcion_convertido.HasValue ? materia_prima.volumen_de_porcion_convertido.Value.ToString("N2") : "")</td>
+                                <td>@materia_prima.unidad_de_medida_convertida</td>
+                                <td>@materia_prima.proveedor</td>
+                                <td>₡@(materia_prima.costo.ToString("N2"))</td>
+                                <td>@(materia_prima.cantidad * materia_prima.volumen_de_porcion_convertido)</td>
+                                <td>@materia_prima.unidad_de_medida_del_peso</td>
+                                <td>@(materia_prima.merma_total_en_gramos.HasValue ? materia_prima.merma_total_en_gramos.Value.ToString("N2"): "")</td>
+                                <td>@(materia_prima.costo_por_gramo.HasValue ? "₡" + materia_prima.costo_por_gramo.Value.ToString("N2") : "")</td>
+                                <td>@(materia_prima.porcentaje_de_merma.HasValue ? materia_prima.porcentaje_de_merma.Value.ToString("N2") + "%": "")</td>
+                                <td>@(materia_prima.costo_de_merma_total.HasValue ? "₡" + materia_prima.costo_de_merma_total.Value.ToString("N2"): "") </td>
+                                <td>@(materia_prima.costo_total_mas_merma_total.HasValue ? "₡" + materia_prima.costo_total_mas_merma_total.Value.ToString("N2"): "")</td>
+                                <td>@(materia_prima.costo_por_gramo_con_merma.HasValue ? "₡" + materia_prima.costo_por_gramo_con_merma.Value.ToString("N2"): "")</td>
+                                <td>
+                                    <a href="@Url.Action("EditarMateriaPrima", "Insumos", new { id = materia_prima.id })" class="btn btn-custom-pink btn-sm fas fa-pencil" title="Editar"></a>
+                                    <a href="@Url.Action("EliminarMateriaPrima", "Insumos", new { id = materia_prima.id })" class="btn btn-danger btn-sm btn-eliminar fas fa-trash" title="Eliminar" data-url="@Url.Action("EliminarMateriaPrima", "Insumos", new { id = materia_prima.id })"></a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    </div>
+}
+
+@section Scripts {
+    <script src="@Url.Content("~/Templates/js/validaciones.js")"></script>
+    <script src="@Url.Content("~/Templates/js/insumos.js")"></script>
+    <!-- SweetAlert de éxito tras eliminación -->
+    <script>
+$(document).ready(function () {
+    var msg = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(TempData["SuccessMessage"]));
+    if (msg) {
+        Swal.fire({
+            icon: 'success',
+            iconColor: '#82E0AA',
+            text: msg,
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#B54885'
+        });
+    }
+});
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(document).on('submit', '#formMateriaPrima', function (e) {
+                e.preventDefault();
+                var $form = $(this);
+                if (!$form.valid()) {
+                    return false;
+                }
+                $.ajax({
+                    url: $form.attr('action'),
+                    type: $form.attr('method'),
+                    data: $form.serialize(),
+                    dataType: 'html',
+                    success: function (response) {
+                        var isJson = false;
+                        var json;
+                        if (typeof response === "object") {
+                            json = response;
+                            isJson = true;
+                        } else if (typeof response === "string" && response.trim().startsWith("{") && response.trim().endsWith("}")) {
+                            try {
+                                json = JSON.parse(response);
+                                isJson = true;
+                            } catch (e) { }
+                        }
+                        // SweetAlert de éxito tras la Creación/Edición
+                        if (isJson && json.success) {
+                            Swal.fire({
+                                icon: 'success',
+                                iconColor: '#82E0AA',
+                                text: json.message,
+                                confirmButtonText: 'Aceptar',
+                                confirmButtonColor: '#B54885'
+                            }).then(function () {
+                                location.reload();
+                            });
+                            return;
+                        }
+                        var $newForm = $(response).find('#formMateriaPrima');
+                        if ($newForm.length) {
+                            $('#formMateriaPrimaContainer').html($newForm);
+                            $newForm.validate({
+                                errorElement: 'span',
+                                errorClass: 'invalid-feedback',
+                                highlight: function (element) { $(element).addClass('is-invalid'); },
+                                unhighlight: function (element) { $(element).removeClass('is-invalid'); },
+                                errorPlacement: function (error, element) { error.insertAfter(element); }
+                            });
+                        }
+                    },
+                    error: function () {
+                        alert('Error al actualizar la materia prima.');
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js" defer></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js" defer></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.bootstrap5.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js" defer></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js" defer></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js" defer></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js" defer></script>
+    <script src="~/Templates/js/paginaciones_y_exportaciones.js" defer></script>
+}
+
+

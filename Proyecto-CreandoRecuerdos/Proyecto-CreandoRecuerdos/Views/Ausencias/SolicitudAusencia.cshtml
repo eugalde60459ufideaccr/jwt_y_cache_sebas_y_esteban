@@ -1,0 +1,111 @@
+﻿@model Proyecto_CreandoRecuerdos.Models.SolicitudAusenciaModel
+
+@{
+    ViewData["Title"] = "Solicitud de Ausencia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var solicitudes = ViewBag.Solicitudes as List<Proyecto_CreandoRecuerdos.base_de_datos.tabla_solicitudes_ausencias>;
+}
+
+@section Styles {
+    <link href="@Url.Content("~/Templates/css/botones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/tablas.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/paginaciones_y_exportaciones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/selects.css")" rel="stylesheet" />
+}
+
+<div class="container my-5 text-center">
+    <h2 class="mb-4" style="font-family: 'Sono', sans-serif;">
+        <i class="fas fa-user-cog me-2"></i> Solicitud de Ausencia
+    </h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FechaInicio, "Fecha de Inicio")
+            <div class="custom-datepicker" data-input="FechaInicio" data-min-today="true">
+                <div class="datepicker-input">
+                    Seleccionar fecha de inicio
+                    <i class="fas fa-calendar-days calendar-icon"></i>
+                </div>
+                <div class="datepicker-calendar"></div>
+            </div>
+            <input type="text" id="FechaInicio" name="FechaInicio" value="@Model.FechaInicio" class="form-control" style="display: none;" />
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FechaFin, "Fecha Final")
+            <div class="custom-datepicker" data-input="FechaFin" data-min-today="true">
+                <div class="datepicker-input">
+                    Seleccionar fecha final
+                    <i class="fas fa-calendar-days calendar-icon"></i>
+                </div>
+                <div class="datepicker-calendar"></div>
+            </div>
+            <input type="text" id="FechaFin" name="FechaFin" value="@Model.FechaFin" class="form-control" style="display: none;" />
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Tipo, "Tipo")
+            @Html.DropDownListFor(model => model.Tipo, new SelectList(new[] { "Vacaciones", "Permiso" }), "Seleccione un tipo", new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Motivo, "Motivo")
+            @Html.TextAreaFor(model => model.Motivo, new { @class = "form-control", rows = 3 })
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+    }
+
+    @if (solicitudes != null && solicitudes.Any())
+    {
+        <hr />
+        <h4 class="mt-5 mb-3" style="font-family: 'Sono', sans-serif;">Historial de Solicitudes</h4>
+        <table class="table mb-0 table-bordered table-striped tabla-global text-center dataTable con-exportaciones" data-page-length="3">
+            <thead class="tabla-global">
+                <tr>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha Final</th>
+                    <th>Tipo</th>
+                    <th>Motivo</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var s in solicitudes)
+                {
+                    <tr>
+                        <td>@s.fecha_inicio.ToShortDateString()</td>
+                        <td>@s.fecha_fin.ToShortDateString()</td>
+                        <td>@s.tipo</td>
+                        <td>@s.motivo</td>
+                        <td>
+                            @if (s.estado == "Aprobado")
+                            {
+                                <span class="badge bg-success">Aprobado</span>
+                            }
+                            else if (s.estado == "Rechazado")
+                            {
+                                <span class="badge bg-danger">Rechazado</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">Pendiente</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js" defer></script>
+    <script src="@Url.Content("~/Templates/js/paginaciones_y_exportaciones.js")" defer></script>
+    <script src="@Url.Content("~/Templates/js/selects.js")" defer></script>
+}

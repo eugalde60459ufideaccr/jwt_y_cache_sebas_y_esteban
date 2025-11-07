@@ -1,0 +1,220 @@
+﻿@model Proyecto_CreandoRecuerdos.Models.FiltroActividadesModel
+@using System.Web.Mvc
+@using System.Web.Mvc.Html
+
+@{
+    ViewData["Title"] = "Historial de Actividades";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/Templates/css/tablas.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/paginaciones_y_exportaciones.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Templates/css/selects.css")" rel="stylesheet" />
+
+    <!-- Estilos para el radio button personalizado -->
+    <style>
+
+        /* Ocultar el radio nativo */
+        .custom-radio input[type="radio"] {
+            display: none;
+        }
+
+        /* Área clickeable */
+        .custom-radio label {
+            cursor: pointer;
+            position: relative;
+            padding-left: 30px;
+            line-height: 20px;
+        }
+
+            /* Círculo externo */
+            .custom-radio label span {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 20px;
+                border: 2px solid #FFFFFF;
+                border-radius: 50%;
+                background: #FFFFFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: border-color .3s ease, box-shadow .3s ease;
+            }
+
+                /* Ícono (oculto inicialmente) */
+                .custom-radio label span i.fas.fa-circle {
+                    font-size: 10px; /* ajusta al gusto */
+                    color: #B54885; /* tu color */
+                    opacity: 0; /* oculto */
+                    transform: scale(0.3); /* pequeño */
+                    transition: opacity .25s ease, transform .25s ease;
+                }
+
+        /* Seleccionado */
+        .custom-radio input[type="radio"]:checked + label span {
+            background-color: #B54885;
+            box-shadow: 0 0 0 .2rem rgba(226,122,176,.25);
+        }
+
+        /* Hover */
+        .custom-radio label:hover span {
+            border-color: #CC8FAE;
+        }
+
+        /* Ajuste del modal para mejor contraste */
+        .modal-content {
+            background-color: #FFF8F9;
+            color: #FFFFFF;
+            border-radius: 8px;
+            border: 1px solid #FFD6EB;
+        }
+
+        .modal-header {
+            background-color: #B54885;
+            color: #FFFFFF;
+            border-bottom: none;
+        }
+
+        .modal-footer {
+            border-top: none;
+        }
+
+        .card-header {
+            background-color: #B54885;
+            color: #FFFFFF
+        }
+
+        .card-body {
+            background-color: #FFFFFF;
+        }
+    </style>
+}
+<div class="container my-5 text-center">
+    <h2 class="mb-4" style="font-family: 'Sono', sans-serif;">
+        <i class="fas fa-user-cog me-2"></i> Historial de Actividades
+    </h2>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5>Filtros</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("FiltrarActividades", "Admin", FormMethod.Post, new
+            {
+                id = "filtroForm",
+                data_export_url = Url.Action("ExportarHistorial", "Admin")
+            }))
+            {
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="IdUsuario">Usuario</label>
+                            @Html.DropDownListFor(m => m.IdUsuario, (SelectList)ViewBag.Usuarios, "Todos los usuarios", new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="TablaAfectada">Tabla Afectada</label>
+                            @Html.DropDownListFor(m => m.TablaAfectada, (SelectList)ViewBag.TablasAfectadas, "Todas las tablas", new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="FechaInicio">Fecha Inicio</label>
+                            <div class="custom-datepicker" data-input="FechaInicio">
+                                <div class="datepicker-input">
+                                    <span class="datepicker-label">Seleccionar fecha de inicio</span>
+                                    <i class="fas fa-calendar-days calendar-icon"></i>
+                                </div>
+                                <div class="datepicker-calendar"></div>
+                            </div>
+                            <input type="text" id="FechaInicio" name="FechaInicio" value="" class="form-control" style="display: none;" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="FechaFin">Fecha Fin</label>
+                            <div class="custom-datepicker" data-input="FechaFin">
+                                <div class="datepicker-input">
+                                    <span class="datepicker-label">Seleccionar fecha final</span>
+                                    <i class="fas fa-calendar-days calendar-icon"></i>
+                                </div>
+                                <div class="datepicker-calendar"></div>
+                            </div>
+                            <input type="text" id="FechaFin" name="FechaFin" value="" class="form-control" style="display: none;" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="TipoAccion">Tipo de Acción</label>
+                            @Html.DropDownListFor(m => m.TipoAccion, (SelectList)ViewBag.TiposAccion, "Todos los tipos", new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-12 text-end">
+                        <button type="submit" class="btn btn-primary">Aplicar Filtros</button>
+                        <button type="button" id="btnExportar" class="btn btn-success">Exportar</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div id="actividadesContainer">
+        @Html.Partial("_Actividades", new List<Proyecto_CreandoRecuerdos.Models.ActividadModel>())
+    </div>
+</div>
+
+<!-- Modal para seleccionar formato de exportación -->
+<div class="modal fade" id="exportModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Exportar Historial</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <p>Seleccione el formato de exportación:</p>
+                <div class="form-check custom-radio">
+                    <input class="form-check-input" type="radio" name="exportFormat" id="pdfFormat" value="PDF">
+                    <label class="form-check-label" for="pdfFormat">
+                        <span><i class="fas fa-circle"></i></span> PDF
+                    </label>
+                </div>
+
+                <div class="form-check custom-radio">
+                    <input class="form-check-input" type="radio" name="exportFormat" id="excelFormat" value="Excel">
+                    <label class="form-check-label" for="excelFormat">
+                        <span><i class="fas fa-circle"></i></span> Excel
+                    </label>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" id="confirmExport" class="btn btn-primary">Exportar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js" defer></script>
+    <script src="@Url.Content("~/Templates/js/paginaciones_y_exportaciones.js")" defer></script>
+    <script src="@Url.Content("~/Templates/js/selects.js")" defer></script>
+    <script src="@Url.Content("~/Templates/js/historialactividades.js")"></script>
+}
