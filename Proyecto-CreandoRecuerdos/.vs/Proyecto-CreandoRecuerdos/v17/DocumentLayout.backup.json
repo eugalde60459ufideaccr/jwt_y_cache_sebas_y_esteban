@@ -3,8 +3,256 @@
   "WorkspaceRootPath": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\suministros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\suministros.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\productos_preparados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\productos_preparados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\materias_primas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\materias_primas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\implementos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\implementos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\pedidos\\gestionar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\pedidos\\gestionar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\empaques_decoraciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\empaques_decoraciones.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\reportes\\ventasmensuales.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\reportes\\ventasmensuales.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\reportes\\reportesindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\reportes\\reportesindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\reportes\\productosdisponibles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\reportes\\productosdisponibles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\reportes\\historialventas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\reportes\\historialventas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\reportes\\empleadosdisponibles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\reportes\\empleadosdisponibles.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\reportes\\costosoperativos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\reportes\\costosoperativos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\registro_usuarios\\iniciar_sesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\registro_usuarios\\iniciar_sesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\registro_usuarios\\gestion_usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\registro_usuarios\\gestion_usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\registro_usuarios\\editar_usuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\registro_usuarios\\editar_usuario.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\pedidos\\registroventas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\pedidos\\registroventas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\pedidos\\procesarpago.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\pedidos\\procesarpago.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\pedidos\\pedidos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\pedidos\\pedidos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\pedidos\\pago.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\pedidos\\pago.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\pedidos\\mispedidos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\pedidos\\mispedidos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\pedidos\\detallepedido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\pedidos\\detallepedido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\pedidos\\confirmacionpedido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\pedidos\\confirmacionpedido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\menu\\menu_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\menu\\menu_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\menu\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\menu\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\precios_finales_sugeridos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\precios_finales_sugeridos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\costos_recetas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\costos_recetas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\_formulariosuministro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\_formulariosuministro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\_formularioproductopreparado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\_formularioproductopreparado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\_formulariopreciofinalsugerido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\_formulariopreciofinalsugerido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\_formulariomateriaprima.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\_formulariomateriaprima.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\_formularioimplemento.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\_formularioimplemento.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\_formularioempaquedecoracion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\_formularioempaquedecoracion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\insumos\\_formulariocostoreceta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\insumos\\_formulariocostoreceta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\horarios\\horarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\horarios\\horarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\empleados\\empleados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\empleados\\empleados.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\admin\\_actividades.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\admin\\_actividades.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\views\\admin\\historialactividades.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\views\\admin\\historialactividades.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\validaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\validaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\selects.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\selects.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\reportes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\reportes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\registro_ventas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\registro_ventas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\registrar_usuario.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\registrar_usuario.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\pedidos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\pedidos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\paginaciones_y_exportaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\paginaciones_y_exportaciones.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\menu.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\menu.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\insumos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\insumos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\historialactividades.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\historialactividades.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\historial_ventas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\historial_ventas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\gestionpedidos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\gestionpedidos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\js\\empleados.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\js\\empleados.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\validaciones.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\validaciones.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\tablas.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\tablas.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\selects.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\selects.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\pedidos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\pedidos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\paginaciones_y_exportaciones.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\paginaciones_y_exportaciones.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\menu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\menu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\insumos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\insumos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\gestion_usuarios.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\gestion_usuarios.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\botones.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\botones.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|c:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\proyecto-creandorecuerdos\\proyecto-creandorecuerdos\\templates\\css\\admin_cliente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{13170A2D-7329-42FB-8057-4737DE66145B}|Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos.csproj|solutionrelative:proyecto-creandorecuerdos\\templates\\css\\admin_cliente.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +262,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 284,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 58,
           "Children": [
             {
               "$type": "Bookmark",
@@ -235,29 +483,839 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            }
-          ]
-        },
-        {
-          "DockedHeight": 116,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "implementos.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\implementos.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\implementos.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\implementos.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\implementos.cshtml",
+              "ViewState": "AgIAAKcAAAAAAAAAAIAywLgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:30.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "materias_primas.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\materias_primas.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\materias_primas.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\materias_primas.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\materias_primas.cshtml",
+              "ViewState": "AgIAALgAAAAAAAAAAIAywMkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:34.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "productos_preparados.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\productos_preparados.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\productos_preparados.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\productos_preparados.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\productos_preparados.cshtml",
+              "ViewState": "AgIAALUAAAAAAAAAAIAywMYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:38.421Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "suministros.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\suministros.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\suministros.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\suministros.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\suministros.cshtml",
+              "ViewState": "AgIAAKwAAAAAAAAAAIAywL0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:40.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Gestionar.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Gestionar.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Gestionar.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Gestionar.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Gestionar.cshtml",
+              "ViewState": "AgIAAGIAAAAAAAAAAIAywHUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:09.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "empaques_decoraciones.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\empaques_decoraciones.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\empaques_decoraciones.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\empaques_decoraciones.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\empaques_decoraciones.cshtml",
+              "ViewState": "AgIAAKcAAAAAAAAAAIAywLgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:28.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:37:19.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VentasMensuales.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\VentasMensuales.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\VentasMensuales.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\VentasMensuales.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\VentasMensuales.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:37:06.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReportesIndex.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\ReportesIndex.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\ReportesIndex.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\ReportesIndex.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\ReportesIndex.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:37:04.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductosDisponibles.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\ProductosDisponibles.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\ProductosDisponibles.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\ProductosDisponibles.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\ProductosDisponibles.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:37:02.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HistorialVentas.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\HistorialVentas.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\HistorialVentas.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\HistorialVentas.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\HistorialVentas.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:56.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmpleadosDisponibles.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\EmpleadosDisponibles.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\EmpleadosDisponibles.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\EmpleadosDisponibles.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\EmpleadosDisponibles.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:54.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CostosOperativos.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\CostosOperativos.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\CostosOperativos.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Reportes\\CostosOperativos.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Reportes\\CostosOperativos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:52.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "iniciar_sesion.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\iniciar_sesion.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\iniciar_sesion.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\iniciar_sesion.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\iniciar_sesion.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:39.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "gestion_usuarios.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\gestion_usuarios.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\gestion_usuarios.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\gestion_usuarios.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\gestion_usuarios.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:38.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "editar_usuario.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\editar_usuario.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\editar_usuario.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\editar_usuario.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Registro_Usuarios\\editar_usuario.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:36.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RegistroVentas.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\RegistroVentas.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\RegistroVentas.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\RegistroVentas.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\RegistroVentas.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:24.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProcesarPago.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\ProcesarPago.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\ProcesarPago.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\ProcesarPago.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\ProcesarPago.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:22.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Pedidos.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Pedidos.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Pedidos.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Pedidos.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Pedidos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:20.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Pago.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Pago.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Pago.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Pago.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\Pago.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:15.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MisPedidos.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\MisPedidos.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\MisPedidos.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\MisPedidos.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\MisPedidos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:14.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DetallePedido.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\DetallePedido.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\DetallePedido.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\DetallePedido.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\DetallePedido.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:07.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ConfirmacionPedido.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\ConfirmacionPedido.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\ConfirmacionPedido.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Pedidos\\ConfirmacionPedido.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Pedidos\\ConfirmacionPedido.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:06.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "menu_admin.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Menu\\menu_admin.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Menu\\menu_admin.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Menu\\menu_admin.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Menu\\menu_admin.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:36:01.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "menu.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Menu\\menu.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Menu\\menu.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Menu\\menu.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Menu\\menu.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:59.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "precios_finales_sugeridos.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\precios_finales_sugeridos.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\precios_finales_sugeridos.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\precios_finales_sugeridos.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\precios_finales_sugeridos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:36.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "costos_recetas.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\costos_recetas.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\costos_recetas.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\costos_recetas.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\costos_recetas.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:27.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_FormularioSuministro.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioSuministro.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioSuministro.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioSuministro.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioSuministro.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:25.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_FormularioProductoPreparado.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioProductoPreparado.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioProductoPreparado.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioProductoPreparado.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioProductoPreparado.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:23.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "_FormularioPrecioFinalSugerido.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioPrecioFinalSugerido.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioPrecioFinalSugerido.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioPrecioFinalSugerido.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioPrecioFinalSugerido.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:22.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "_FormularioMateriaPrima.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioMateriaPrima.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioMateriaPrima.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioMateriaPrima.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioMateriaPrima.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:16.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "_FormularioImplemento.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioImplemento.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioImplemento.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioImplemento.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioImplemento.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:15.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_FormularioEmpaqueDecoracion.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioEmpaqueDecoracion.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioEmpaqueDecoracion.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioEmpaqueDecoracion.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioEmpaqueDecoracion.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:13.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_FormularioCostoReceta.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioCostoReceta.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioCostoReceta.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioCostoReceta.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Insumos\\_FormularioCostoReceta.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:12.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Horarios.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Horarios\\Horarios.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Horarios\\Horarios.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Horarios\\Horarios.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Horarios\\Horarios.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:05.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Empleados.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Empleados\\Empleados.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Empleados\\Empleados.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Empleados\\Empleados.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Empleados\\Empleados.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:35:01.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "_Actividades.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Admin\\_Actividades.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Admin\\_Actividades.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Admin\\_Actividades.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Admin\\_Actividades.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:34:53.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "HistorialActividades.cshtml",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Admin\\HistorialActividades.cshtml",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Views\\Admin\\HistorialActividades.cshtml",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Views\\Admin\\HistorialActividades.cshtml",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Views\\Admin\\HistorialActividades.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-07T06:34:50.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "validaciones.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\validaciones.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\validaciones.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\validaciones.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\validaciones.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:34:18.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "selects.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\selects.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\selects.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\selects.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\selects.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:34:12.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "reportes.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\reportes.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\reportes.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\reportes.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\reportes.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:34:10.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "registro_ventas.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\registro_ventas.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\registro_ventas.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\registro_ventas.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\registro_ventas.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:34:08.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "registrar_usuario.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\registrar_usuario.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\registrar_usuario.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\registrar_usuario.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\registrar_usuario.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:34:06.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "pedidos.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\pedidos.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\pedidos.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\pedidos.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\pedidos.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:34:03.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "paginaciones_y_exportaciones.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\paginaciones_y_exportaciones.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\paginaciones_y_exportaciones.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\paginaciones_y_exportaciones.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\paginaciones_y_exportaciones.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:33:59.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "menu.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\menu.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\menu.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\menu.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\menu.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:33:57.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "insumos.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\insumos.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\insumos.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\insumos.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\insumos.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:33:47.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "historialactividades.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\historialactividades.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\historialactividades.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\historialactividades.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\historialactividades.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:33:45.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "historial_ventas.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\historial_ventas.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\historial_ventas.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\historial_ventas.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\historial_ventas.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:33:43.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
               "Title": "gestionPedidos.js",
               "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\gestionPedidos.js",
               "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\gestionPedidos.js",
               "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\gestionPedidos.js",
               "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\gestionPedidos.js",
-              "ViewState": "AgIAAAABAAAAAAAAAAAAAAIBAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-07T06:23:52.27Z",
+              "WhenOpened": "2025-11-07T06:33:42.346Z",
               "EditorCaption": ""
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "empleados.js",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\empleados.js",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\js\\empleados.js",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\js\\empleados.js",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\js\\empleados.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-07T06:33:37.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "validaciones.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\validaciones.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\validaciones.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\validaciones.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\validaciones.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:25.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "tablas.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\tablas.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\tablas.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\tablas.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\tablas.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:24.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "selects.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\selects.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\selects.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\selects.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\selects.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:22.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "pedidos.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\pedidos.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\pedidos.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\pedidos.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\pedidos.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:21.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "paginaciones_y_exportaciones.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\paginaciones_y_exportaciones.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\paginaciones_y_exportaciones.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\paginaciones_y_exportaciones.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\paginaciones_y_exportaciones.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:20.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "menu.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\menu.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\menu.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\menu.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\menu.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:18.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "insumos.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\insumos.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\insumos.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\insumos.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\insumos.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:17.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "home.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\home.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\home.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\home.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\home.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:15.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "gestion_usuarios.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\gestion_usuarios.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\gestion_usuarios.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\gestion_usuarios.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\gestion_usuarios.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:14.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "estilos.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\estilos.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\estilos.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\estilos.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\estilos.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:12.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "botones.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\botones.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\botones.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\botones.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\botones.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:11.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "admin_cliente.css",
+              "DocumentMoniker": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\admin_cliente.css",
+              "RelativeDocumentMoniker": "Proyecto-CreandoRecuerdos\\Templates\\css\\admin_cliente.css",
+              "ToolTip": "C:\\jwt y cache\\jwt_y_cache_sebas_esteban\\jwt_y_cache_sebas_y_esteban\\Proyecto-CreandoRecuerdos\\Proyecto-CreandoRecuerdos\\Templates\\css\\admin_cliente.css",
+              "RelativeToolTip": "Proyecto-CreandoRecuerdos\\Templates\\css\\admin_cliente.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-07T06:33:09.831Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 116,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         },
