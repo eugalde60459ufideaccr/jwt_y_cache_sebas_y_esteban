@@ -5,7 +5,6 @@ using Proyecto_CreandoRecuerdos.Models;
 using System;
 using System.Linq;
 using System.Text;
-using System.util;
 using System.Web;
 using System.Web.Mvc;
 
@@ -17,13 +16,6 @@ namespace Proyecto_CreandoRecuerdos.Controllers
     public class Registro_UsuariosController : Controller
     {
         Utilitarios util = new Utilitarios();
-
-
-        //[HttpGet]
-        //public ActionResult registro_usuarios()
-        //{
-        //    return View();
-        //}
 
         [HttpGet]
         public ActionResult logout()
@@ -60,10 +52,6 @@ namespace Proyecto_CreandoRecuerdos.Controllers
             // 🔹 Redirigir al login o registro
             return RedirectToAction("iniciar_sesion", "Registro_Usuarios");
         }
-
-
-
-
 
         [HttpGet]
         public ActionResult iniciar_sesion()
@@ -167,6 +155,7 @@ namespace Proyecto_CreandoRecuerdos.Controllers
         }
 
         [HttpGet]
+        [RolAuthorize("1")]
         public ActionResult gestion_usuarios(string search = null, string fecha = null)
         {
             using (var context = new BD_CREANDO_RECUERDOSEntities())
@@ -216,6 +205,7 @@ namespace Proyecto_CreandoRecuerdos.Controllers
         }
 
         [HttpPost]
+        [RolAuthorize("1")]
         public ActionResult inactivar_usuarios(int id)
         {
             using (var context = new BD_CREANDO_RECUERDOSEntities())
@@ -226,6 +216,7 @@ namespace Proyecto_CreandoRecuerdos.Controllers
         }
 
         [HttpPost]
+        [RolAuthorize("1")]
         public ActionResult activar_usuarios(int id)
         {
             using (var context = new BD_CREANDO_RECUERDOSEntities())
@@ -236,6 +227,7 @@ namespace Proyecto_CreandoRecuerdos.Controllers
         }
 
         [HttpGet]
+        [RolAuthorize("1")]
         public ActionResult editar_usuario(int id)
         {
             using (var context = new BD_CREANDO_RECUERDOSEntities())
@@ -265,6 +257,7 @@ namespace Proyecto_CreandoRecuerdos.Controllers
         }
 
         [HttpPost]
+        [RolAuthorize("1")]
         public ActionResult editar_usuario(UsuarioModel model)
         {
             using (var context = new BD_CREANDO_RECUERDOSEntities())

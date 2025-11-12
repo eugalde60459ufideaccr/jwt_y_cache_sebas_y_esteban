@@ -146,7 +146,7 @@
                                     Admin
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownAdmin">
-                                    <li><a class="dropdown-item" asp-controller="gestion" href="@Url.Action("gestion_usuarios", "Registro_Usuarios")" asp-action="Gestionar">Gestión de usuariossss</a></li>
+                                    <li><a class="dropdown-item" asp-controller="gestion" href="@Url.Action("gestion_usuarios", "Registro_Usuarios")" asp-action="Gestionar">Gestión de usuarios</a></li>
                                     <li><a class="dropdown-item" href="@Url.Action("Empleados", "Empleados")">Empleados</a></li>
                                     <li>
                                         <a class="dropdown-item" href="@Url.Action("GestionSolicitudesAusencias", "Ausencias")">
@@ -210,12 +210,14 @@
         <!-- Contenido principal -->
         <div id="container-wrap">
             <div class="container">
-                <main role="main" class="pb-3">
-                    @RenderBody()
-                </main>
+                <div class="main-centered-content">
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                </div>
             </div>
-            @RenderSection("ListadoInsumos", required: false)
-        </div>
+                @RenderSection("ListadoInsumos", required: false)
+            </div>
 
         <!-- Footer -->
         <footer id="footer" class="footer text-white pt-5 pb-3">

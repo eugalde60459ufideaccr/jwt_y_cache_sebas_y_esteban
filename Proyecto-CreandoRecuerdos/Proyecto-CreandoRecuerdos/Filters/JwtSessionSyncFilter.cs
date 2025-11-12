@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Security.Claims;
 using System.Linq;
 using System.Web;
@@ -17,9 +16,33 @@ namespace Proyecto_CreandoRecuerdos.Filters
                 var rol = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Role)?.Value;
                 var nombre = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
 
-                // Refrescar variables de sesión
                 HttpContext.Current.Session["Rol"] = rol;
                 HttpContext.Current.Session["Usuario"] = nombre;
+                HttpContext.Current.Session["WasAuthenticated"] = true;
+
+                // Guardar en cookie
+                var wasAuthCookie = new HttpCookie("WasAuthenticated", "true")
+                {
+                    Expires = DateTime.UtcNow.AddHours(1),
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.Lax,
+                };
+                HttpContext.Current.Response.Cookies.Set(wasAuthCookie);
+            }
+            else
+            {
+                HttpContext.Current.Session["WasAuthenticated"] = false;
+
+                // Eliminar cookie
+                var wasAuthCookie = new HttpCookie("WasAuthenticated", "")
+                {
+                    Expires = DateTime.UtcNow.AddDays(-1),
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.Lax,
+                };
+                HttpContext.Current.Response.Cookies.Set(wasAuthCookie);
             }
 
             base.OnActionExecuting(filterContext);

@@ -1,8 +1,6 @@
 ﻿using Proyecto_CreandoRecuerdos.base_de_datos;
 using Proyecto_CreandoRecuerdos.Filters;
-using Proyecto_CreandoRecuerdos.Models;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;

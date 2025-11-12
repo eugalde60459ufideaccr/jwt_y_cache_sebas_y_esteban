@@ -2,9 +2,7 @@
 using System.Web.Mvc;
 using Proyecto_CreandoRecuerdos.Models;
 using Proyecto_CreandoRecuerdos.base_de_datos;
-using System;
 using Proyecto_CreandoRecuerdos.Filters;
-
 
 namespace Proyecto_CreandoRecuerdos.Controllers
 {

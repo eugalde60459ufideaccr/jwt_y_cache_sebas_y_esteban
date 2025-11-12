@@ -12,7 +12,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Proyecto_CreandoRecuerdos.Controllers
@@ -165,6 +164,7 @@ namespace Proyecto_CreandoRecuerdos.Controllers
 
         // Obtener pedidos con filtros y paginación
         [HttpGet]
+        [RolAuthorize("1")]
         public JsonResult ObtenerPedidos(string estado = null, string fechaInicio = null, string fechaFin = null,
     string metodoPago = null)
         {
@@ -1393,6 +1393,7 @@ namespace Proyecto_CreandoRecuerdos.Controllers
         }
 
         [HttpGet]
+        [RolAuthorize("1")]
         public ActionResult RegistroVentas()
         {
             using (var context = new BD_CREANDO_RECUERDOSEntities())

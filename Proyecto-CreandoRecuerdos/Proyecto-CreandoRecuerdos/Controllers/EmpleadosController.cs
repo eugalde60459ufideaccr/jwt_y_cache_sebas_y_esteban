@@ -10,6 +10,7 @@ namespace Proyecto_CreandoRecuerdos.Controllers
 {
     // Evitar el almacenamiento en caché de las vistas
     [OutputCache(NoStore = true, Duration = 0, VaryByParam = "*")]
+
     [RolAuthorize("1")]
     public class EmpleadosController : Controller
     {

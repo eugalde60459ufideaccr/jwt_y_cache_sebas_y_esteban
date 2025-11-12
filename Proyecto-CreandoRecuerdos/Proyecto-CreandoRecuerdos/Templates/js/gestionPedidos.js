@@ -276,6 +276,8 @@ class GestionPedidos {
     </tr>
 `).join('');
 
+        console.log('Registros tras filtrar:', $('#tablaGestionarPedidos tbody tr').length);
+
         // Asegura que la clase dataTable esté presente
         $tabla.addClass('dataTable');
         $tabla.removeClass('no-auto-dt');
