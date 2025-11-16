@@ -67,6 +67,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BD_CREANDO_RECUERDOSModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tabla_actividades">
       <EntityTypeMapping TypeName="BD_CREANDO_RECUERDOSModel.tabla_actividades">
         <MappingFragment StoreEntitySet="tabla_actividades">
@@ -413,6 +424,7 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_actualizar_usuario" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_actualizar_usuario" />
     <FunctionImportMapping FunctionImportName="sp_agregar_detalle_pedido" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_agregar_detalle_pedido" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_autenticar_usuario" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_autenticar_usuario">
       <ResultMapping>
         <ComplexTypeMapping TypeName="BD_CREANDO_RECUERDOSModel.sp_autenticar_usuario_Result">
@@ -466,9 +478,30 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_crear_pedido_completo" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_crear_pedido_completo" />
     <FunctionImportMapping FunctionImportName="sp_crear_producto" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_crear_producto" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_dropdiagram" />
     <FunctionImportMapping FunctionImportName="sp_eliminar_empleado" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_eliminar_empleado" />
     <FunctionImportMapping FunctionImportName="sp_eliminar_producto" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_eliminar_producto" />
     <FunctionImportMapping FunctionImportName="sp_eliminar_recomendacion" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_eliminar_recomendacion" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_CREANDO_RECUERDOSModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BD_CREANDO_RECUERDOSModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_inactivar_usuario" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_inactivar_usuario" />
     <FunctionImportMapping FunctionImportName="sp_insertar_recomendacion" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_insertar_recomendacion" />
     <FunctionImportMapping FunctionImportName="sp_manejar_cliente_pedido" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_manejar_cliente_pedido" />
@@ -651,5 +684,8 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="BD_CREANDO_RECUERDOSModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="SP_VerificarUsuarioActivo" FunctionName="BD_CREANDO_RECUERDOSModel.Store.SP_VerificarUsuarioActivo" />
   </EntityContainerMapping>
 </Mapping>

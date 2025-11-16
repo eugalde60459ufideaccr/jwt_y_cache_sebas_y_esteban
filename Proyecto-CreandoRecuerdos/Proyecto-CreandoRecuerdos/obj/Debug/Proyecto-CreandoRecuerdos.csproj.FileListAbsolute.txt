@@ -96,7 +96,6 @@ C:\Diseño y Desarrollo\Proyecto_Administra-la-Creacion-de-Recuerdos\Proyecto-Cr
 C:\Diseño y Desarrollo\Proyecto_Administra-la-Creacion-de-Recuerdos\Proyecto-CreandoRecuerdos\Proyecto-CreandoRecuerdos\bin\System.Web.WebPages.dll
 C:\Diseño y Desarrollo\Proyecto_Administra-la-Creacion-de-Recuerdos\Proyecto-CreandoRecuerdos\Proyecto-CreandoRecuerdos\bin\System.Web.WebPages.Razor.dll
 C:\Diseño y Desarrollo\Proyecto_Administra-la-Creacion-de-Recuerdos\Proyecto-CreandoRecuerdos\Proyecto-CreandoRecuerdos\bin\WebGrease.dll
-C:\Diseño y Desarrollo\Proyecto_Administra-la-Creacion-de-Recuerdos\Proyecto-CreandoRecuerdos\Proyecto-CreandoRecuerdos\bin\System.ValueTuple.dll
 C:\Diseño y Desarrollo\Proyecto_Administra-la-Creacion-de-Recuerdos\Proyecto-CreandoRecuerdos\Proyecto-CreandoRecuerdos\bin\BouncyCastle.Cryptography.xml
 C:\Diseño y Desarrollo\Proyecto_Administra-la-Creacion-de-Recuerdos\Proyecto-CreandoRecuerdos\Proyecto-CreandoRecuerdos\bin\ClosedXML.pdb
 C:\Diseño y Desarrollo\Proyecto_Administra-la-Creacion-de-Recuerdos\Proyecto-CreandoRecuerdos\Proyecto-CreandoRecuerdos\bin\ClosedXML.xml

@@ -71,6 +71,16 @@
     <NavigationProperty Name="tabla_precios_finales_sugeridos" Relationship="Self.FK__precios_s__id_pr__09A971A2" FromRole="precios_suministros_utilizados" ToRole="tabla_precios_finales_sugeridos" />
     <NavigationProperty Name="tabla_suministros" Relationship="Self.FK__precios_s__id_su__0A9D95DB" FromRole="precios_suministros_utilizados" ToRole="tabla_suministros" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="tabla_actividades">
     <Key>
       <PropertyRef Name="id_actividad" />
@@ -757,6 +767,7 @@
     <EntitySet Name="precios_empaques_decoraciones_utilizados" EntityType="Self.precios_empaques_decoraciones_utilizados" />
     <EntitySet Name="precios_implementos_utilizados" EntityType="Self.precios_implementos_utilizados" />
     <EntitySet Name="precios_suministros_utilizados" EntityType="Self.precios_suministros_utilizados" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="tabla_actividades" EntityType="Self.tabla_actividades" />
     <EntitySet Name="tabla_categorias" EntityType="Self.tabla_categorias" />
     <EntitySet Name="tabla_clientes" EntityType="Self.tabla_clientes" />
@@ -938,6 +949,12 @@
       <Parameter Name="precio_unitario" Mode="In" Type="Decimal" />
       <Parameter Name="personalizacion" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
     <FunctionImport Name="sp_autenticar_usuario" ReturnType="Collection(BD_CREANDO_RECUERDOSModel.sp_autenticar_usuario_Result)">
       <Parameter Name="correo" Mode="In" Type="String" />
       <Parameter Name="contrasenna" Mode="In" Type="String" />
@@ -992,6 +1009,16 @@
       <Parameter Name="id_categoria" Mode="In" Type="Int32" />
       <Parameter Name="img_url" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
     <FunctionImport Name="sp_eliminar_empleado">
       <Parameter Name="id_usuario" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -1000,6 +1027,14 @@
     </FunctionImport>
     <FunctionImport Name="sp_eliminar_recomendacion">
       <Parameter Name="id_recomendacion" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BD_CREANDO_RECUERDOSModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BD_CREANDO_RECUERDOSModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="sp_inactivar_usuario">
       <Parameter Name="Id" Mode="In" Type="Int32" />
@@ -1076,6 +1111,15 @@
       <Parameter Name="calificacion" Mode="In" Type="Int32" />
       <Parameter Name="comentarios" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="SP_VerificarUsuarioActivo" ReturnType="Collection(Boolean)">
+      <Parameter Name="Id_usuario" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_actualizar_estado_pedido_Result">
     <Property Type="Int32" Name="resultado" Nullable="false" />
@@ -1115,6 +1159,17 @@
     <Property Type="Int32" Name="tiempo_estimado" Nullable="true" />
     <Property Type="Int32" Name="resultado" Nullable="false" />
     <Property Type="String" Name="mensaje" Nullable="false" MaxLength="26" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
   <ComplexType Name="sp_mostrar_ventas_web_Result">
     <Property Type="Int32" Name="id_venta" Nullable="false" />

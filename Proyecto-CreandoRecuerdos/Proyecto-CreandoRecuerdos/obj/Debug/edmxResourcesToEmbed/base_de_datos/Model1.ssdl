@@ -61,6 +61,16 @@
     <Property Name="total_costo" Type="decimal" Precision="18" Scale="2" />
     <Property Name="es_impresion_de_facturas" Type="bit" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="tabla_actividades">
     <Key>
       <PropertyRef Name="id_actividad" />
@@ -695,6 +705,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="sp_activar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id" Type="int" Mode="In" />
   </Function>
@@ -740,6 +751,12 @@
     <Parameter Name="cantidad" Type="int" Mode="In" />
     <Parameter Name="precio_unitario" Type="decimal" Mode="In" />
     <Parameter Name="personalizacion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
   </Function>
   <Function Name="sp_autenticar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="correo" Type="varchar" Mode="In" />
@@ -795,6 +812,16 @@
     <Parameter Name="id_categoria" Type="int" Mode="In" />
     <Parameter Name="img_url" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
   <Function Name="sp_eliminar_empleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id_usuario" Type="int" Mode="In" />
   </Function>
@@ -803,6 +830,14 @@
   </Function>
   <Function Name="sp_eliminar_recomendacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id_recomendacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
   </Function>
   <Function Name="sp_inactivar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id" Type="int" Mode="In" />
@@ -879,12 +914,22 @@
     <Parameter Name="calificacion" Type="int" Mode="In" />
     <Parameter Name="comentarios" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_VerificarUsuarioActivo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id_usuario" Type="nvarchar" Mode="In" />
+  </Function>
   <EntityContainer Name="BD_CREANDO_RECUERDOSModelStoreContainer">
     <EntitySet Name="costos_receta_materias_primas_utilizadas" EntityType="Self.costos_receta_materias_primas_utilizadas" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="costos_receta_productos_preparados_utilizados" EntityType="Self.costos_receta_productos_preparados_utilizados" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="precios_empaques_decoraciones_utilizados" EntityType="Self.precios_empaques_decoraciones_utilizados" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="precios_implementos_utilizados" EntityType="Self.precios_implementos_utilizados" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="precios_suministros_utilizados" EntityType="Self.precios_suministros_utilizados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tabla_actividades" EntityType="Self.tabla_actividades" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tabla_categorias" EntityType="Self.tabla_categorias" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tabla_clientes" EntityType="Self.tabla_clientes" Schema="dbo" store:Type="Tables" />

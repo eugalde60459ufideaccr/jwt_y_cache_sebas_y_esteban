@@ -93,8 +93,9 @@
       <param name="resource">The name of the resource.</param>
     </member>
     <member name="M:System.Drawing.Bitmap.ApplyEffect(System.Drawing.Imaging.Effects.Effect,System.Drawing.Rectangle)">
-      <param name="effect" />
-      <param name="area" />
+      <summary>Alters the bitmap by applying the given <paramref name="effect" />.</summary>
+      <param name="effect">The effect to apply.</param>
+      <param name="area">The area to apply to, or <see cref="F:System.Drawing.Rectangle.Empty" /> for the entire image.</param>
     </member>
     <member name="M:System.Drawing.Bitmap.Clone(System.Drawing.Rectangle,System.Drawing.Imaging.PixelFormat)">
       <summary>Creates a copy of the section of this <see cref="T:System.Drawing.Bitmap" /> defined by <see cref="T:System.Drawing.Rectangle" /> structure and with a specified <see cref="T:System.Drawing.Imaging.PixelFormat" /> enumeration.</summary>
@@ -119,14 +120,16 @@
       <returns>The <see cref="T:System.Drawing.Bitmap" /> that this method creates.</returns>
     </member>
     <member name="M:System.Drawing.Bitmap.ConvertFormat(System.Drawing.Imaging.PixelFormat,System.Drawing.Imaging.DitherType,System.Drawing.Imaging.PaletteType,System.Drawing.Imaging.ColorPalette,System.Single)">
-      <param name="format" />
-      <param name="ditherType" />
-      <param name="paletteType" />
-      <param name="palette" />
-      <param name="alphaThresholdPercent" />
+      <summary>Converts the bitmap to the specified <paramref name="format" /> using the given <paramref name="ditherType" />. The original pixel data is replaced with the new format.</summary>
+      <param name="format">The new pixel format.</param>
+      <param name="ditherType">The dithering algorithm.</param>
+      <param name="paletteType">The palette type to use when the pixel format is indexed.</param>
+      <param name="palette">Pointer to a <see cref="T:System.Drawing.Imaging.ColorPalette" /> that specifies the palette whose indexes are stored in the pixel data of the converted bitmap. This must be specified for indexed pixel formats.</param>
+      <param name="alphaThresholdPercent">A real number in the range 0 through 100 that specifies which pixels in the source bitmap will map to the transparent color in the converted bitmap.</param>
     </member>
     <member name="M:System.Drawing.Bitmap.ConvertFormat(System.Drawing.Imaging.PixelFormat)">
-      <param name="format" />
+      <summary>Converts the bitmap to the specified <paramref name="format" />. The original pixel data is replaced with the new format.</summary>
+      <param name="format">The new pixel format.</param>
     </member>
     <member name="M:System.Drawing.Bitmap.FromHicon(System.IntPtr)">
       <summary>Creates a <see cref="T:System.Drawing.Bitmap" /> from a Windows handle to an icon.</summary>
@@ -1332,14 +1335,16 @@
       <param name="types">An array of <see cref="T:System.Drawing.Drawing2D.PathPointType" /> enumeration elements that specifies the type of each corresponding point in the <paramref name="pts" /> array.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.#ctor(System.ReadOnlySpan{System.Drawing.Point},System.ReadOnlySpan{System.Byte},System.Drawing.Drawing2D.FillMode)">
-      <param name="pts" />
-      <param name="types" />
-      <param name="fillMode" />
+      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> class with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathPointType"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> arrays and with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration element.</summary>
+      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that defines the coordinates of the points that make up this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</param>
+      <param name="types">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathPointType"></xref> enumeration elements that specifies the type of each corresponding point in the <code data-dev-comment-type="paramref">pts</code> array.</param>
+      <param name="fillMode">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that specifies how the interiors of shapes in this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> are filled.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.#ctor(System.ReadOnlySpan{System.Drawing.PointF},System.ReadOnlySpan{System.Byte},System.Drawing.Drawing2D.FillMode)">
-      <param name="pts" />
-      <param name="types" />
-      <param name="fillMode" />
+      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> class with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathPointType"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> arrays and with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration element.</summary>
+      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that defines the coordinates of the points that make up this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</param>
+      <param name="types">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathPointType"></xref> enumeration elements that specifies the type of each corresponding point in the <code data-dev-comment-type="paramref">pts</code> array.</param>
+      <param name="fillMode">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that specifies how the interiors of shapes in this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> are filled.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddArc(System.Drawing.Rectangle,System.Single,System.Single)">
       <summary>Appends an elliptical arc to the current figure.</summary>
@@ -1416,10 +1421,12 @@
       <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that define the curves.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddBeziers(System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="points" />
+      <summary>Adds a sequence of connected cubic Bézier curves to the current figure.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the curves.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddBeziers(System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="points" />
+      <summary>Adds a sequence of connected cubic Bézier curves to the current figure.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the curves.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve(System.Drawing.Point[],System.Single)">
       <summary>Adds a closed curve to this path. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
@@ -1440,18 +1447,22 @@
       <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that define the curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve(System.ReadOnlySpan{System.Drawing.Point},System.Single)">
-      <param name="points" />
-      <param name="tension" />
+      <summary>Adds a closed curve to this path. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the curve.</param>
+      <param name="tension">A value between from 0 through 1 that specifies the amount that the curve bends between points, with 0 being the smallest curve (sharpest corner) and 1 being the smoothest curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve(System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="points" />
+      <summary>Adds a closed curve to this path. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve(System.ReadOnlySpan{System.Drawing.PointF},System.Single)">
-      <param name="points" />
-      <param name="tension" />
+      <summary>Adds a closed curve to this path. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the curve.</param>
+      <param name="tension">A value between from 0 through 1 that specifies the amount that the curve bends between points, with 0 being the smallest curve (sharpest corner) and 1 being the smoothest curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddClosedCurve(System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="points" />
+      <summary>Adds a closed curve to this path. A cardinal spline curve is used because the curve travels through each of the points in the array.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points that define the curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.Drawing.Point[],System.Int32,System.Int32,System.Single)">
       <summary>Adds a spline curve to the current figure.</summary>
@@ -1486,18 +1497,22 @@
       <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that define the curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.ReadOnlySpan{System.Drawing.Point},System.Single)">
-      <param name="points" />
-      <param name="tension" />
+      <summary>Adds a spline curve to the current figure.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the curve.</param>
+      <param name="tension">A value that specifies the amount that the curve bends between control points. Values greater than 1 produce unpredictable results.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="points" />
+      <summary>Adds a spline curve to the current figure.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.ReadOnlySpan{System.Drawing.PointF},System.Single)">
-      <param name="points" />
-      <param name="tension" />
+      <summary>Adds a spline curve to the current figure.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the curve.</param>
+      <param name="tension">A value that specifies the amount that the curve bends between control points. Values greater than 1 produce unpredictable results.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddCurve(System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="points" />
+      <summary>Adds a spline curve to the current figure.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the curve.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddEllipse(System.Drawing.Rectangle)">
       <summary>Adds an ellipse to the current path.</summary>
@@ -1552,12 +1567,15 @@
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddLines(System.Drawing.PointF[])">
       <summary>Appends a series of connected line segments to the end of this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
       <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that define the line segments to add.</param>
+      <exception cref="T:System.ArgumentException" />
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddLines(System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="points" />
+      <summary>Appends a series of connected line segments to the end of this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the line segments to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddLines(System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="points" />
+      <summary>Appends a series of connected line segments to the end of this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref>.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that define the line segments to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddPath(System.Drawing.Drawing2D.GraphicsPath,System.Boolean)">
       <summary>Appends the specified <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> to this path.</summary>
@@ -1597,10 +1615,12 @@
       <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that defines the polygon to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddPolygon(System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="points" />
+      <summary>Adds a polygon to this path.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that defines the polygon to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddPolygon(System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="points" />
+      <summary>Adds a polygon to this path.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that defines the polygon to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddRectangle(System.Drawing.Rectangle)">
       <summary>Adds a rectangle to this path.</summary>
@@ -1619,18 +1639,22 @@
       <param name="rects">An array of <see cref="T:System.Drawing.RectangleF" /> structures that represents the rectangles to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddRectangles(System.ReadOnlySpan{System.Drawing.Rectangle})">
-      <param name="rects" />
+      <summary>Adds a series of rectangles to this path.</summary>
+      <param name="rects">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structures that represents the rectangles to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddRectangles(System.ReadOnlySpan{System.Drawing.RectangleF})">
-      <param name="rects" />
+      <summary>Adds a series of rectangles to this path.</summary>
+      <param name="rects">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structures that represents the rectangles to add.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddRoundedRectangle(System.Drawing.Rectangle,System.Drawing.Size)">
-      <param name="rect" />
-      <param name="radius" />
+      <summary>Adds a rounded rectangle to this path.</summary>
+      <param name="rect">The bounds of the rectangle to add.</param>
+      <param name="radius">The radius width and height used to round the corners of the rectangle.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddRoundedRectangle(System.Drawing.RectangleF,System.Drawing.SizeF)">
-      <param name="rect" />
-      <param name="radius" />
+      <summary>Adds a rounded rectangle to this path.</summary>
+      <param name="rect">The bounds of the rectangle to add.</param>
+      <param name="radius">The radius width and height used to round the corners of the rectangle.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.AddString(System.String,System.Drawing.FontFamily,System.Int32,System.Single,System.Drawing.Point,System.Drawing.StringFormat)">
       <summary>Adds a text string to this path.</summary>
@@ -1719,10 +1743,14 @@
       <returns>A <see cref="T:System.Drawing.PointF" /> that represents the last point in this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</returns>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.GetPathPoints(System.Span{System.Drawing.PointF})">
-      <param name="destination" />
+      <summary>Gets the points in the path.</summary>
+      <param name="destination">Span to copy the points into. This should be at least as long as the <see cref="P:System.Drawing.Drawing2D.GraphicsPath.PointCount" />.</param>
+      <returns>The count of points copied into the <paramref name="destination" />.</returns>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.GetPathTypes(System.Span{System.Byte})">
-      <param name="destination" />
+      <summary>Gets the <see cref="T:System.Drawing.Drawing2D.PathPointType" /> types for the points in the path.</summary>
+      <param name="destination">Span to copy the types into. This should be at least as long as the <see cref="P:System.Drawing.Drawing2D.GraphicsPath.PointCount" />.</param>
+      <returns>The count of types copied into the <paramref name="destination" />.</returns>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.IsOutlineVisible(System.Drawing.Point,System.Drawing.Pen,System.Drawing.Graphics)">
       <summary>Indicates whether the specified point is contained within (under) the outline of this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> when drawn with the specified <see cref="T:System.Drawing.Pen" /> and using the specified <see cref="T:System.Drawing.Graphics" />.</summary>
@@ -1871,11 +1899,17 @@
       <param name="srcRect">A <see cref="T:System.Drawing.RectangleF" /> that represents the rectangle that is transformed to the parallelogram defined by <paramref name="destPoints" />.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.Warp(System.ReadOnlySpan{System.Drawing.PointF},System.Drawing.RectangleF,System.Drawing.Drawing2D.Matrix,System.Drawing.Drawing2D.WarpMode,System.Single)">
-      <param name="destPoints" />
-      <param name="srcRect" />
-      <param name="matrix" />
-      <param name="warpMode" />
-      <param name="flatness" />
+      <summary>Applies a warp transform, defined by a rectangle and a parallelogram, to this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
+      <param name="destPoints">
+          An array of points that define a parallelogram to which the rectangle defined by <paramref name="srcRect" />
+          is transformed.</param>
+      <param name="srcRect">
+          A rectangle that represents the rectangle that is transformed to the parallelogram defined by <paramref name="destPoints" />.</param>
+      <param name="matrix">A matrix that specifies a geometric transform to apply to the path.</param>
+      <param name="warpMode">Specifies whether this warp operation uses perspective or bilinear mode.</param>
+      <param name="flatness">
+          A value from 0 through 1 that specifies how flat the resulting path is. For more information, see the
+            <see cref="M:System.Drawing.Drawing2D.GraphicsPath.Flatten(System.Drawing.Drawing2D.Matrix,System.Single)" /> methods.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPath.Widen(System.Drawing.Pen,System.Drawing.Drawing2D.Matrix,System.Single)">
       <summary>Replaces this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> with curves that enclose the area that is filled when this path is drawn by the specified pen.</summary>
@@ -1897,7 +1931,7 @@
       <returns>A <see cref="T:System.Drawing.Drawing2D.FillMode" /> enumeration that specifies how the interiors of shapes in this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> are filled.</returns>
     </member>
     <member name="P:System.Drawing.Drawing2D.GraphicsPath.PathData">
-      <summary>Gets a <see cref="T:System.Drawing.Drawing2D.PathData" /> that encapsulates arrays of points (<paramref name="points" />) and types (<paramref name="types" />) for this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
+      <summary>Gets a <see cref="T:System.Drawing.Drawing2D.PathData" /> that encapsulates arrays of points and types for this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
       <returns>A <see cref="T:System.Drawing.Drawing2D.PathData" /> that encapsulates arrays for both the points and types for this <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</returns>
     </member>
     <member name="P:System.Drawing.Drawing2D.GraphicsPath.PathPoints">
@@ -1928,10 +1962,12 @@
       <returns>The number of points copied.</returns>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPathIterator.CopyData(System.Span{System.Drawing.PointF},System.Span{System.Byte},System.Int32,System.Int32)">
-      <param name="points" />
-      <param name="types" />
-      <param name="startIndex" />
-      <param name="endIndex" />
+      <summary>Copies the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath.PathPoints"></xref> property and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath.PathTypes"></xref> property arrays of the associated <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> into the two specified arrays.</summary>
+      <param name="points">Upon return, contains an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points in the path.</param>
+      <param name="types">Upon return, contains an array of bytes that represents the types of points in the path.</param>
+      <param name="startIndex">Specifies the starting index of the arrays.</param>
+      <param name="endIndex">Specifies the ending index of the arrays.</param>
+      <returns>The number of points copied.</returns>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPathIterator.Dispose">
       <summary>Releases all resources used by this <see cref="T:System.Drawing.Drawing2D.GraphicsPathIterator" /> object.</summary>
@@ -1943,8 +1979,10 @@
       <returns>The number of points copied.</returns>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPathIterator.Enumerate(System.Span{System.Drawing.PointF},System.Span{System.Byte})">
-      <param name="points" />
-      <param name="types" />
+      <summary>Copies the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath.PathPoints"></xref> property and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath.PathTypes"></xref> property arrays of the associated <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.GraphicsPath"></xref> into the two specified arrays.</summary>
+      <param name="points">Upon return, contains an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points in the path.</param>
+      <param name="types">Upon return, contains an array of bytes that represents the types of points in the path.</param>
+      <returns>The number of points copied.</returns>
     </member>
     <member name="M:System.Drawing.Drawing2D.GraphicsPathIterator.Finalize">
       <summary>Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.</summary>
@@ -2563,10 +2601,12 @@
       <param name="pts">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.TransformPoints(System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="pts" />
+      <summary>Applies the geometric transform represented by this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.Matrix"></xref> to a specified array of points.</summary>
+      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.TransformPoints(System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="pts" />
+      <summary>Applies the geometric transform represented by this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.Matrix"></xref> to a specified array of points.</summary>
+      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.TransformVectors(System.Drawing.Point[])">
       <summary>Applies only the scale and rotate components of this <see cref="T:System.Drawing.Drawing2D.Matrix" /> to the specified array of points.</summary>
@@ -2577,10 +2617,12 @@
       <param name="pts">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.TransformVectors(System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="pts" />
+      <summary>Multiplies each vector in an array by the matrix. The translation elements of this matrix (third row) are ignored.</summary>
+      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.TransformVectors(System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="pts" />
+      <summary>Multiplies each vector in an array by the matrix. The translation elements of this matrix (third row) are ignored.</summary>
+      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.Translate(System.Single,System.Single,System.Drawing.Drawing2D.MatrixOrder)">
       <summary>Applies the specified translation vector to this <see cref="T:System.Drawing.Drawing2D.Matrix" /> in the specified order.</summary>
@@ -2598,7 +2640,8 @@
       <param name="pts">An array of <see cref="T:System.Drawing.Point" /> structures that represents the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.Matrix.VectorTransformPoints(System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="pts" />
+      <summary>Multiplies each vector in an array by the matrix. The translation elements of this matrix (third row) are ignored.</summary>
+      <param name="pts">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represents the points to transform.</param>
     </member>
     <member name="P:System.Drawing.Drawing2D.Matrix.Elements">
       <summary>Gets an array of floating-point values that represents the elements of this <see cref="T:System.Drawing.Drawing2D.Matrix" />.</summary>
@@ -2654,12 +2697,14 @@
       <param name="path">The <see cref="T:System.Drawing.Drawing2D.GraphicsPath" /> that defines the area filled by this <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" />.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.Drawing2D.WrapMode,System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="wrapMode" />
-      <param name="points" />
+      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathGradientBrush"></xref> class with the specified points and wrap mode.</summary>
+      <param name="wrapMode">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.WrapMode"></xref> that specifies how fills drawn with this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathGradientBrush"></xref> are tiled.</param>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that make up the vertices of the path.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.Drawing2D.WrapMode,System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="wrapMode" />
-      <param name="points" />
+      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathGradientBrush"></xref> class with the specified points and wrap mode.</summary>
+      <param name="wrapMode">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.WrapMode"></xref> that specifies how fills drawn with this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathGradientBrush"></xref> are tiled.</param>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that make up the vertices of the path.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.Drawing.Point[],System.Drawing.Drawing2D.WrapMode)">
       <summary>Initializes a new instance of the <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" /> class with the specified points and wrap mode.</summary>
@@ -2680,10 +2725,12 @@
       <param name="points">An array of <see cref="T:System.Drawing.PointF" /> structures that represents the points that make up the vertices of the path.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="points" />
+      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathGradientBrush"></xref> class with the specified points.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that make up the vertices of the path.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.PathGradientBrush.#ctor(System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="points" />
+      <summary>Initializes a new instance of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.PathGradientBrush"></xref> class with the specified points.</summary>
+      <param name="points">An array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represents the points that make up the vertices of the path.</param>
     </member>
     <member name="M:System.Drawing.Drawing2D.PathGradientBrush.Clone">
       <summary>Creates an exact copy of this <see cref="T:System.Drawing.Drawing2D.PathGradientBrush" />.</summary>
@@ -3676,12 +3723,16 @@
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawBeziers(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="pen" />
-      <param name="points" />
+      <summary>Draws a series of Bézier splines from an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the points that determine the curve. The number of points in the array should be a multiple of 3 plus 1, such as 4, 7, or 10.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawBeziers(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="pen" />
-      <param name="points" />
+      <summary>Draws a series of Bézier splines from an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the points that determine the curve. The number of points in the array should be a multiple of 3 plus 1, such as 4, 7, or 10.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCachedBitmap(System.Drawing.Imaging.CachedBitmap,System.Int32,System.Int32)">
       <summary>Draws the given <paramref name="cachedBitmap" />.</summary>
@@ -3751,24 +3802,32 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.Point},System.Single,System.Drawing.Drawing2D.FillMode)">
-      <param name="pen" />
-      <param name="points" />
-      <param name="tension" />
-      <param name="fillmode" />
+      <summary>Draws a closed cardinal spline defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and height of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
+      <param name="fillmode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the curve is filled. This parameter is required but is ignored.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="pen" />
-      <param name="points" />
+      <summary>Draws a closed cardinal spline defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and height of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.PointF},System.Single,System.Drawing.Drawing2D.FillMode)">
-      <param name="pen" />
-      <param name="points" />
-      <param name="tension" />
-      <param name="fillmode" />
+      <summary>Draws a closed cardinal spline defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and height of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
+      <param name="fillmode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the curve is filled. This parameter is required but is ignored.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawClosedCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="pen" />
-      <param name="points" />
+      <summary>Draws a closed cardinal spline defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and height of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.Drawing.Point[],System.Int32,System.Int32,System.Single)">
       <summary>Draws a cardinal spline through a specified array of <see cref="T:System.Drawing.Point" /> structures using a specified tension.</summary>
@@ -3865,42 +3924,56 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.Point},System.Int32,System.Int32,System.Single)">
-      <param name="pen" />
-      <param name="points" />
-      <param name="offset" />
-      <param name="numberOfSegments" />
-      <param name="tension" />
+      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
+      <param name="offset">Offset from the first element in the array of the <code data-dev-comment-type="paramref">points</code> parameter to the starting point in the curve.</param>
+      <param name="numberOfSegments">Number of segments after the starting point to include in the curve.</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.Point},System.Single)">
-      <param name="pen" />
-      <param name="points" />
-      <param name="tension" />
+      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="pen" />
-      <param name="points" />
+      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.PointF},System.Int32,System.Int32,System.Single)">
-      <param name="pen" />
-      <param name="points" />
-      <param name="offset" />
-      <param name="numberOfSegments" />
-      <param name="tension" />
+      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
+      <param name="offset">Offset from the first element in the array of the <code data-dev-comment-type="paramref">points</code> parameter to the starting point in the curve.</param>
+      <param name="numberOfSegments">Number of segments after the starting point to include in the curve.</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.PointF},System.Int32,System.Int32)">
-      <param name="pen" />
-      <param name="points" />
-      <param name="offset" />
-      <param name="numberOfSegments" />
+      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
+      <param name="offset">Offset from the first element in the array of the <code data-dev-comment-type="paramref">points</code> parameter to the starting point in the curve.</param>
+      <param name="numberOfSegments">Number of segments after the starting point to include in the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.PointF},System.Single)">
-      <param name="pen" />
-      <param name="points" />
-      <param name="tension" />
+      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawCurve(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="pen" />
-      <param name="points" />
+      <summary>Draws a cardinal spline through a specified array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using a specified tension.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the curve.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawEllipse(System.Drawing.Pen,System.Drawing.Rectangle)">
       <summary>Draws an ellipse specified by a bounding <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -3970,16 +4043,19 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <paramref name="icon" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Imaging.Effects.Effect,System.Drawing.RectangleF,System.Drawing.Drawing2D.Matrix,System.Drawing.GraphicsUnit,System.Drawing.Imaging.ImageAttributes)">
-      <param name="image" />
-      <param name="effect" />
-      <param name="srcRect" />
-      <param name="transform" />
-      <param name="srcUnit" />
-      <param name="imageAttr" />
+      <summary>Draws a portion of an image after applying a specified effect.</summary>
+      <param name="image">
+          The <see cref="T:System.Drawing.Image" /> to be drawn.</param>
+      <param name="effect">The effect to be applied when drawing.</param>
+      <param name="srcRect">The portion of the image to be drawn. <see cref="F:System.Drawing.RectangleF.Empty" /> draws the full image.</param>
+      <param name="transform">The transform to apply to the <paramref name="srcRect" /> to determine the destination.</param>
+      <param name="srcUnit">The unit of measure of the <paramref name="srcRect" />.</param>
+      <param name="imageAttr">Additional adjustments to be applied, if any.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Imaging.Effects.Effect)">
-      <param name="image" />
-      <param name="effect" />
+      <summary>Draws a portion of an image after applying a specified effect.</summary>
+      <param name="image">The <xref data-throw-if-not-resolved="true" uid="System.Drawing.Image"></xref> to be drawn.</param>
+      <param name="effect">The effect to be applied when drawing.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawImage(System.Drawing.Image,System.Drawing.Point)">
       <summary>Draws the specified <see cref="T:System.Drawing.Image" />, using its original physical size, at the specified location.</summary>
@@ -4477,12 +4553,16 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawLines(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="pen" />
-      <param name="points" />
+      <summary>Draws a series of line segments that connect an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the line segments.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the points to connect.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawLines(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="pen" />
-      <param name="points" />
+      <summary>Draws a series of line segments that connect an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the line segments.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the points to connect.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawPath(System.Drawing.Pen,System.Drawing.Drawing2D.GraphicsPath)">
       <summary>Draws a <see cref="T:System.Drawing.Drawing2D.GraphicsPath" />.</summary>
@@ -4566,12 +4646,16 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawPolygon(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="pen" />
-      <param name="points" />
+      <summary>Draws a polygon defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the polygon.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the vertices of the polygon.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawPolygon(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="pen" />
-      <param name="points" />
+      <summary>Draws a polygon defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the polygon.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the vertices of the polygon.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawRectangle(System.Drawing.Pen,System.Drawing.Rectangle)">
       <summary>Draws a rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -4635,22 +4719,28 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
         <paramref name="rects" /> is a zero-length array.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.DrawRectangles(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.Rectangle})">
-      <param name="pen" />
-      <param name="rects" />
+      <summary>Draws a series of rectangles specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.Rectangle"></xref> structures.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the outlines of the rectangles.</param>
+      <param name="rects">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Rectangle"></xref> structures that represent the rectangles to draw.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawRectangles(System.Drawing.Pen,System.ReadOnlySpan{System.Drawing.RectangleF})">
-      <param name="pen" />
-      <param name="rects" />
+      <summary>Draws a series of rectangles specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.Rectangle"></xref> structures.</summary>
+      <param name="pen">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> that determines the color, width, and style of the outlines of the rectangles.</param>
+      <param name="rects">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Rectangle"></xref> structures that represent the rectangles to draw.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawRoundedRectangle(System.Drawing.Pen,System.Drawing.Rectangle,System.Drawing.Size)">
-      <param name="pen" />
-      <param name="rect" />
-      <param name="radius" />
+      <summary>Draws the outline of the specified rounded rectangle.</summary>
+      <param name="pen">The <xref data-throw-if-not-resolved="true" uid="System.Drawing.Pen"></xref> to draw the outline with.</param>
+      <param name="rect">The bounds of the rounded rectangle.</param>
+      <param name="radius">The radius width and height used to round the corners of the rectangle.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawRoundedRectangle(System.Drawing.Pen,System.Drawing.RectangleF,System.Drawing.SizeF)">
-      <param name="pen" />
-      <param name="rect" />
-      <param name="radius" />
+      <summary>Draws the outline of the specified rounded rectangle.</summary>
+      <param name="pen">The <see cref="T:System.Drawing.Pen" /> to draw the outline with.</param>
+      <param name="rect">The bounds of the rounded rectangle.</param>
+      <param name="radius">The radius width and height used to round the corners of the rectangle.</param>
     </member>
     <member name="M:System.Drawing.Graphics.DrawString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Drawing.Brush,System.Drawing.PointF,System.Drawing.StringFormat)">
       <summary>Draws the specified text string at the specified location with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> and <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> objects using the formatting attributes of the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
@@ -5327,34 +5417,40 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.Point},System.Drawing.Drawing2D.FillMode,System.Single)">
-      <param name="brush" />
-      <param name="points" />
-      <param name="fillmode" />
-      <param name="tension" />
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using the specified fill mode and tension.</summary>
+      <param name="brush">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
+      <param name="fillmode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the curve is filled.</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.Point},System.Drawing.Drawing2D.FillMode)">
-      <param name="brush" />
-      <param name="points" />
-      <param name="fillmode" />
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using the specified fill mode and tension.</summary>
+      <param name="brush">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
+      <param name="fillmode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the curve is filled.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="brush" />
-      <param name="points" />
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using the specified fill mode and tension.</summary>
+      <param name="brush">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.PointF},System.Drawing.Drawing2D.FillMode,System.Single)">
-      <param name="brush" />
-      <param name="points" />
-      <param name="fillmode" />
-      <param name="tension" />
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using the specified fill mode and tension.</summary>
+      <param name="brush">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
+      <param name="fillmode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the curve is filled.</param>
+      <param name="tension">Value greater than or equal to 0.0F that specifies the tension of the curve.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.PointF},System.Drawing.Drawing2D.FillMode)">
-      <param name="brush" />
-      <param name="points" />
-      <param name="fillmode" />
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using the specified fill mode and tension.</summary>
+      <param name="brush">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
+      <param name="fillmode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines how the curve is filled.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillClosedCurve(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="brush" />
-      <param name="points" />
+      <summary>Fills the interior of a closed cardinal spline curve defined by an array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures using the specified fill mode and tension.</summary>
+      <param name="brush">A <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that define the spline.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillEllipse(System.Drawing.Brush,System.Drawing.Rectangle)">
       <summary>Fills the interior of an ellipse defined by a bounding rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -5504,22 +5600,30 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="points" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.Point},System.Drawing.Drawing2D.FillMode)">
-      <param name="brush" />
-      <param name="points" />
-      <param name="fillMode" />
+      <summary>Fills the interior of a polygon defined by an array of points specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using the specified fill mode.</summary>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the vertices of the polygon to fill.</param>
+      <param name="fillMode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines the style of the fill.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="brush" />
-      <param name="points" />
+      <summary>Fills the interior of a polygon defined by an array of points specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using the specified fill mode.</summary>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the vertices of the polygon to fill.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.PointF},System.Drawing.Drawing2D.FillMode)">
-      <param name="brush" />
-      <param name="points" />
-      <param name="fillMode" />
+      <summary>Fills the interior of a polygon defined by an array of points specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using the specified fill mode.</summary>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the vertices of the polygon to fill.</param>
+      <param name="fillMode">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.FillMode"></xref> enumeration that determines the style of the fill.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillPolygon(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="brush" />
-      <param name="points" />
+      <summary>Fills the interior of a polygon defined by an array of points specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures using the specified fill mode.</summary>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="points">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Point"></xref> structures that represent the vertices of the polygon to fill.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillRectangle(System.Drawing.Brush,System.Drawing.Rectangle)">
       <summary>Fills the interior of a rectangle specified by a <see cref="T:System.Drawing.Rectangle" /> structure.</summary>
@@ -5587,15 +5691,19 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
 
  <paramref name="rects" /> is <see langword="null" />.</exception>
       <exception cref="T:System.ArgumentException">
-        <paramref name="Rects" /> is a zero-length array.</exception>
+        <paramref name="rects" /> is a zero-length array.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillRectangles(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.Rectangle})">
-      <param name="brush" />
-      <param name="rects" />
+      <summary>Fills the interiors of a series of rectangles specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structures.</summary>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="rects">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structures that represent the rectangles to fill.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillRectangles(System.Drawing.Brush,System.ReadOnlySpan{System.Drawing.RectangleF})">
-      <param name="brush" />
-      <param name="rects" />
+      <summary>Fills the interiors of a series of rectangles specified by <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structures.</summary>
+      <param name="brush">
+        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> that determines the characteristics of the fill.</param>
+      <param name="rects">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.RectangleF"></xref> structures that represent the rectangles to fill.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillRegion(System.Drawing.Brush,System.Drawing.Region)">
       <summary>Fills the interior of a <see cref="T:System.Drawing.Region" />.</summary>
@@ -5611,14 +5719,16 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  <paramref name="region" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Graphics.FillRoundedRectangle(System.Drawing.Brush,System.Drawing.Rectangle,System.Drawing.Size)">
-      <param name="brush" />
-      <param name="rect" />
-      <param name="radius" />
+      <summary>Fills the interior of a rounded rectangle with a <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref>.</summary>
+      <param name="brush">The <xref data-throw-if-not-resolved="true" uid="System.Drawing.Brush"></xref> to fill the rounded rectangle with.</param>
+      <param name="rect">The bounds of the rounded rectangle.</param>
+      <param name="radius">The radius width and height used to round the corners of the rectangle.</param>
     </member>
     <member name="M:System.Drawing.Graphics.FillRoundedRectangle(System.Drawing.Brush,System.Drawing.RectangleF,System.Drawing.SizeF)">
-      <param name="brush" />
-      <param name="rect" />
-      <param name="radius" />
+      <summary>Fills the interior of a rounded rectangle with a <see cref="T:System.Drawing.Brush" />.</summary>
+      <param name="brush">The <see cref="T:System.Drawing.Brush" /> to fill the rounded rectangle with.</param>
+      <param name="rect">The bounds of the rounded rectangle.</param>
+      <param name="radius">The radius width and height used to round the corners of the rectangle.</param>
     </member>
     <member name="M:System.Drawing.Graphics.Finalize">
       <summary>Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.</summary>
@@ -5844,7 +5954,7 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="width">Maximum width of the string.</param>
       <param name="format">
         <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
+      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">format</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.ReadOnlySpan{System.Char},System.Drawing.Font,System.Int32)">
       <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref>.</summary>
@@ -5862,66 +5972,78 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.PointF,System.Drawing.StringFormat)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" /> and formatted with the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> defines the text format of the string.</param>
       <param name="origin">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structure that represents the upper-left corner of the string.</param>
+        <see cref="T:System.Drawing.PointF" /> structure that represents the upper-left corner of the string.</param>
       <param name="stringFormat">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
+        <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified by the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat,System.Int32@,System.Int32@)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" /> and formatted with the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> that defines the text format of the string.</param>
       <param name="layoutArea">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
+        <see cref="T:System.Drawing.SizeF" /> structure that specifies the maximum layout area for the text.</param>
       <param name="stringFormat">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
+        <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
       <param name="charactersFitted">Number of characters in the string.</param>
       <param name="linesFilled">Number of text lines in the string.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size of the string, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size of the string, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF,System.Drawing.StringFormat)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" /> and formatted with the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> defines the text format of the string.</param>
       <param name="layoutArea">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
+        <see cref="T:System.Drawing.SizeF" /> structure that specifies the maximum layout area for the text.</param>
       <param name="stringFormat">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
+        <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="stringFormat" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Drawing.SizeF)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> within the specified layout area.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" /> within the specified layout area.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> defines the text format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> defines the text format of the string.</param>
       <param name="layoutArea">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that specifies the maximum layout area for the text.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified by the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
+        <see cref="T:System.Drawing.SizeF" /> structure that specifies the maximum layout area for the text.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified by the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Int32,System.Drawing.StringFormat)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> and formatted with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref>.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" /> and formatted with the specified <see cref="T:System.Drawing.StringFormat" />.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the text format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> that defines the text format of the string.</param>
       <param name="width">Maximum width of the string.</param>
       <param name="format">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.StringFormat"></xref> that represents formatting information, such as line spacing, for the string.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter and the <code data-dev-comment-type="paramref">stringFormat</code> parameter.</returns>
+        <see cref="T:System.Drawing.StringFormat" /> that represents formatting information, such as line spacing, for the string.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter and the <paramref name="format" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font,System.Int32)">
-      <summary>Measures the specified string when drawn with the specified <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref>.</summary>
+      <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" />.</summary>
       <param name="text">String to measure.</param>
       <param name="font">
-        <xref data-throw-if-not-resolved="true" uid="System.Drawing.Font"></xref> that defines the format of the string.</param>
+        <see cref="T:System.Drawing.Font" /> that defines the format of the string.</param>
       <param name="width">Maximum width of the string in pixels.</param>
-      <returns>This method returns a <xref data-throw-if-not-resolved="true" uid="System.Drawing.SizeF"></xref> structure that represents the size, in the units specified by the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics.PageUnit"></xref> property, of the string specified in the <code data-dev-comment-type="paramref">text</code> parameter as drawn with the <code data-dev-comment-type="paramref">font</code> parameter.</returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="font" /> is <see langword="null" />.</exception>
+      <returns>This method returns a <see cref="T:System.Drawing.SizeF" /> structure that represents the size, in the units specified by the <see cref="P:System.Drawing.Graphics.PageUnit" /> property, of the string specified in the <paramref name="text" /> parameter as drawn with the <paramref name="font" /> parameter.</returns>
     </member>
     <member name="M:System.Drawing.Graphics.MeasureString(System.String,System.Drawing.Font)">
       <summary>Measures the specified string when drawn with the specified <see cref="T:System.Drawing.Font" />.</summary>
@@ -6060,14 +6182,16 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="pts">Array of <see cref="T:System.Drawing.PointF" /> structures that represent the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Graphics.TransformPoints(System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Drawing2D.CoordinateSpace,System.ReadOnlySpan{System.Drawing.Point})">
-      <param name="destSpace" />
-      <param name="srcSpace" />
-      <param name="pts" />
+      <summary>Transforms an array of points from one coordinate space to another using the current world and page transformations of this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics"></xref>.</summary>
+      <param name="destSpace">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.CoordinateSpace"></xref> enumeration that specifies the destination coordinate space.</param>
+      <param name="srcSpace">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.CoordinateSpace"></xref> enumeration that specifies the source coordinate space.</param>
+      <param name="pts">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represent the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Graphics.TransformPoints(System.Drawing.Drawing2D.CoordinateSpace,System.Drawing.Drawing2D.CoordinateSpace,System.ReadOnlySpan{System.Drawing.PointF})">
-      <param name="destSpace" />
-      <param name="srcSpace" />
-      <param name="pts" />
+      <summary>Transforms an array of points from one coordinate space to another using the current world and page transformations of this <xref data-throw-if-not-resolved="true" uid="System.Drawing.Graphics"></xref>.</summary>
+      <param name="destSpace">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.CoordinateSpace"></xref> enumeration that specifies the destination coordinate space.</param>
+      <param name="srcSpace">Member of the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Drawing2D.CoordinateSpace"></xref> enumeration that specifies the source coordinate space.</param>
+      <param name="pts">Array of <xref data-throw-if-not-resolved="true" uid="System.Drawing.PointF"></xref> structures that represent the points to transform.</param>
     </member>
     <member name="M:System.Drawing.Graphics.TranslateClip(System.Int32,System.Int32)">
       <summary>Translates the clipping region of this <see cref="T:System.Drawing.Graphics" /> by specified amounts in the horizontal and vertical directions.</summary>
@@ -6245,14 +6369,14 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <summary>Initializes a new instance of the <see cref="T:System.Drawing.Icon" /> class of the specified size from the specified file.</summary>
       <param name="fileName">The name and path to the file that contains the icon data.</param>
       <param name="size">The desired size of the icon.</param>
-      <exception cref="T:System.ArgumentException">The <paramref name="string" /> is <see langword="null" /> or does not contain image data.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="fileName" /> is <see langword="null" /> or does not contain image data.</exception>
     </member>
     <member name="M:System.Drawing.Icon.#ctor(System.String,System.Int32,System.Int32)">
       <summary>Initializes a new instance of the <see cref="T:System.Drawing.Icon" /> class with the specified width and height from the specified file.</summary>
       <param name="fileName">The name and path to the file that contains the <see cref="T:System.Drawing.Icon" /> data.</param>
       <param name="width">The desired width of the <see cref="T:System.Drawing.Icon" />.</param>
       <param name="height">The desired height of the <see cref="T:System.Drawing.Icon" />.</param>
-      <exception cref="T:System.ArgumentException">The <paramref name="string" /> is <see langword="null" /> or does not contain image data.</exception>
+      <exception cref="T:System.ArgumentException">The <paramref name="fileName" /> is <see langword="null" /> or does not contain image data.</exception>
     </member>
     <member name="M:System.Drawing.Icon.#ctor(System.String)">
       <summary>Initializes a new instance of the <see cref="T:System.Drawing.Icon" /> class from the specified file name.</summary>
@@ -6286,7 +6410,7 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="filePath">Path to an icon or PE (.dll, .exe) file.</param>
       <param name="id">Positive numbers refer to an icon index in the given file. Negative numbers refer to a specific native resource identifier in a PE (.dll, .exe) file.</param>
       <param name="smallIcon">
-        <code data-dev-comment-type="langword">true</code> to get the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Icon"></xref> at the current system small icon size setting. <code data-dev-comment-type="langword">false</code> to get the <xref data-throw-if-not-resolved="true" uid="System.Drawing.Icon"></xref> at the current system large icon size setting. The default is <code data-dev-comment-type="langword">false</code>.</param>
+        <see langword="true" /> to get the <see cref="T:System.Drawing.Icon" /> at the current system small icon size setting. <see langword="false" /> to get the <see cref="T:System.Drawing.Icon" /> at the current system large icon size setting. The default is <see langword="false" />.</param>
       <returns>An <xref data-throw-if-not-resolved="true" uid="System.Drawing.Icon"></xref>, or <code data-dev-comment-type="langword">null</code> if an icon can't be found with the specified <code data-dev-comment-type="paramref">id</code>.</returns>
     </member>
     <member name="M:System.Drawing.Icon.ExtractIcon(System.String,System.Int32,System.Int32)">
@@ -6313,6 +6437,8 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
     <member name="M:System.Drawing.Icon.Save(System.IO.Stream)">
       <summary>Saves this <see cref="T:System.Drawing.Icon" /> to the specified output <see cref="T:System.IO.Stream" />.</summary>
       <param name="outputStream">The <see cref="T:System.IO.Stream" /> to save to.</param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="outputStream" /> is <see langword="null" />.</exception>
     </member>
     <member name="M:System.Drawing.Icon.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
       <summary>Populates a <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with the data that is required to serialize the target object.</summary>
@@ -6923,7 +7049,10 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <summary>Initializes a new instance of the <see cref="T:System.Drawing.Imaging.ColorMatrix" /> class.</summary>
     </member>
     <member name="M:System.Drawing.Imaging.ColorMatrix.#ctor(System.ReadOnlySpan{System.Single})">
-      <param name="newColorMatrix" />
+      <summary>Initializes a new instance of the <see cref="T:System.Drawing.Imaging.ColorMatrix" /> class with the elements in the specified matrix.</summary>
+      <param name="newColorMatrix">The values of the elements of the new matrix.</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="newColorMatrix" /> did not have 25 values.</exception>
     </member>
     <member name="M:System.Drawing.Imaging.ColorMatrix.#ctor(System.Single[][])">
       <summary>Initializes a new instance of the <see cref="T:System.Drawing.Imaging.ColorMatrix" /> class using the elements in the specified matrix <paramref name="newColorMatrix" />.</summary>
@@ -7060,15 +7189,20 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <summary>Defines an array of colors that make up a color palette. The colors are 32-bit ARGB colors. Not inheritable.</summary>
     </member>
     <member name="M:System.Drawing.Imaging.ColorPalette.#ctor(System.Drawing.Color[])">
-      <param name="customColors" />
+      <summary>Creates a custom color palette.</summary>
+      <param name="customColors">Color entries for the palette.</param>
     </member>
     <member name="M:System.Drawing.Imaging.ColorPalette.#ctor(System.Drawing.Imaging.PaletteType)">
-      <param name="fixedPaletteType" />
+      <summary>Creates a standard color palette.</summary>
+      <param name="fixedPaletteType">The palette type.</param>
     </member>
     <member name="M:System.Drawing.Imaging.ColorPalette.CreateOptimalPalette(System.Int32,System.Boolean,System.Drawing.Bitmap)">
-      <param name="colors" />
-      <param name="useTransparentColor" />
-      <param name="bitmap" />
+      <summary>Creates an optimal color palette based on the colors in a given bitmap.</summary>
+      <param name="colors">The number of colors you want to have in an optimal palette based on a the specified bitmap.</param>
+      <param name="useTransparentColor">
+        <see langword="true" /> to include the transparent color in the palette; otherwise, <see langword="false" />.</param>
+      <param name="bitmap">The bitmap to base the optimal color palette off of.</param>
+      <returns>The optimal color palette for the specified bitmap.</returns>
     </member>
     <member name="P:System.Drawing.Imaging.ColorPalette.Entries">
       <summary>Gets an array of <see cref="T:System.Drawing.Color" /> structures.</summary>
@@ -7087,160 +7221,503 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
  0x00000004  
  The colors in the array are halftone values.</returns>
     </member>
-    <member name="T:System.Drawing.Imaging.DitherType" />
-    <member name="F:System.Drawing.Imaging.DitherType.DualSpiral4x4" />
-    <member name="F:System.Drawing.Imaging.DitherType.DualSpiral8x8" />
-    <member name="F:System.Drawing.Imaging.DitherType.ErrorDiffusion" />
-    <member name="F:System.Drawing.Imaging.DitherType.None" />
-    <member name="F:System.Drawing.Imaging.DitherType.Ordered16x16" />
-    <member name="F:System.Drawing.Imaging.DitherType.Ordered4x4" />
-    <member name="F:System.Drawing.Imaging.DitherType.Ordered8x8" />
-    <member name="F:System.Drawing.Imaging.DitherType.Solid" />
-    <member name="F:System.Drawing.Imaging.DitherType.Spiral4x4" />
-    <member name="F:System.Drawing.Imaging.DitherType.Spiral8x8" />
-    <member name="T:System.Drawing.Imaging.Effects.BlackSaturationCurveEffect" />
+    <member name="T:System.Drawing.Imaging.DitherType">
+      <summary>Specifies how images are dithered with a reduced color palette.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.DitherType.DualSpiral4x4">
+      <summary>Dithering is performed using the colors in one of the standard fixed palettes.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.DitherType.DualSpiral8x8">
+      <summary>Dithering is performed using the colors in one of the standard fixed palettes.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.DitherType.ErrorDiffusion">
+      <summary>
+          Dithering is performed based on the palette specified by the palette parameter of the
+          <see cref="M:System.Drawing.Bitmap.ConvertFormat(System.Drawing.Imaging.PixelFormat,System.Drawing.Imaging.DitherType,System.Drawing.Imaging.PaletteType,System.Drawing.Imaging.ColorPalette,System.Single)" /> method.
+          This algorithm can be used with any palette.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.DitherType.None">
+      <summary>
+          No dithering is performed. Pixels in the source bitmap are mapped to the nearest color in the palette specified
+          by the palette parameter of the <see cref="M:System.Drawing.Bitmap.ConvertFormat(System.Drawing.Imaging.PixelFormat,System.Drawing.Imaging.DitherType,System.Drawing.Imaging.PaletteType,System.Drawing.Imaging.ColorPalette,System.Single)" />
+          method. This algorithm can be used with any palette other than <see cref="F:System.Drawing.Imaging.PaletteType.Custom" />.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.DitherType.Ordered16x16">
+      <summary>Dithering is performed using the colors in one of the standard fixed palettes.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.DitherType.Ordered4x4">
+      <summary>
+          Algorithm to perform dithering based on the colors in one of the standard fixed palettes. 
+          This algorithm can also be used to convert a bitmap to a 16-bits-per-pixel format that has no palette.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.DitherType.Ordered8x8">
+      <summary>Dithering is performed using the colors in one of the standard fixed palettes.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.DitherType.Solid">
+      <summary>
+          No dithering is performed. Pixels in the source bitmap are mapped to the nearest color in the palette specified
+          by the palette parameter of the <see cref="M:System.Drawing.Bitmap.ConvertFormat(System.Drawing.Imaging.PixelFormat,System.Drawing.Imaging.DitherType,System.Drawing.Imaging.PaletteType,System.Drawing.Imaging.ColorPalette,System.Single)" />
+          method. This algorithm can be used with any palette.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.DitherType.Spiral4x4">
+      <summary>Dithering is performed using the colors in one of the standard fixed palettes.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.DitherType.Spiral8x8">
+      <summary>Dithering is performed using the colors in one of the standard fixed palettes.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.BlackSaturationCurveEffect">
+      <summary>Sets the black saturation of an image. The black saturation is the point at which the darkest areas of the image are converted to black.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.BlackSaturationCurveEffect.#ctor(System.Drawing.Imaging.Effects.CurveChannel,System.Int32)">
-      <param name="channel" />
-      <param name="blackSaturation" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.BlackSaturationCurveEffect" /> with the given parameters.</summary>
+      <param name="channel">The channel or channels that the effect is applied to.</param>
+      <param name="blackSaturation">
+        <para>A value of t specifies that the interval [t, 255] is mapped linearly to the interval [0, 255]. For example, if</para>
+        <para>
+          <paramref name="blackSaturation" /> is equal to 15, then color channel values in the interval [15, 255] are adjusted</para>
+        <para>so that they spread out over the interval [0, 255]. Color channel values less than 15 are set to 0.</para>
+      </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="blackSaturation" /> is less than 0 or greater than 254.</exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.BlackSaturationCurveEffect.BlackSaturation" />
-    <member name="T:System.Drawing.Imaging.Effects.BlurEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.BlackSaturationCurveEffect.BlackSaturation">
+      <summary>Gets the black saturation value.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.BlurEffect">
+      <summary>Applies a Gaussian blur.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.BlurEffect.#ctor(System.Single,System.Boolean)">
-      <param name="radius" />
-      <param name="expandEdge" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.BlurEffect" /> with the specified blur radius.</summary>
+      <param name="radius">
+            Real number that specifies the blur radius (the radius of the Gaussian convolution kernel) in pixels. The
+            radius must be in the range 0 through 256. As the radius increases, the resulting bitmap becomes more blurry.</param>
+      <param name="expandEdge">
+        <see langword="true" /> to expand the bitmap by an amount equal to the blur radius so that it can have soft edges; <see langword="false" /> to keep the bitmap the same size and clip the soft edges.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="radius" /> is less than 0 or greater than 256.</exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.BlurEffect.ExpandEdge" />
-    <member name="P:System.Drawing.Imaging.Effects.BlurEffect.Radius" />
-    <member name="T:System.Drawing.Imaging.Effects.BrightnessContrastEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.BlurEffect.ExpandEdge">
+      <summary>
+          Gets a value that indicates whether the bitmap expands by an amount equal to the blur radius.</summary>
+      <returns>
+        <see langword="true" /> if the bitmap expands by an amount equal to the radius so that it can have soft edges. <see langword="false" /> if the bitmap remains the same size and the soft edges are clipped.</returns>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.BlurEffect.Radius">
+      <summary>Gets the blur radius (the radius of the Gaussian convolution kernel) in pixels.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.BrightnessContrastEffect">
+      <summary>Changes the brightness and contrast of an image.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.BrightnessContrastEffect.#ctor(System.Int32,System.Int32)">
-      <param name="brightnessLevel" />
-      <param name="contrastLevel" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.BrightnessContrastEffect" /> with the given parameters.</summary>
+      <param name="brightnessLevel">
+        <para>Integer in the range -255 through 255 that specifies the brightness level. If the value is 0, the brightness</para>
+        <para>remains the same. As the value moves from 0 to 255, the brightness of the image increases. As the value moves</para>
+        <para>from 0 to -255, the brightness of the image decreases.</para>
+      </param>
+      <param name="contrastLevel">
+        <para>Integer in the range -100 through 100 that specifies the contrast level. If the value is 0, the contrast</para>
+        <para>remains the same. As the value moves from 0 to 100, the contrast of the image increases. As the value moves</para>
+        <para>from 0 to -100, the contrast of the image decreases.</para>
+      </param>
+      <exception cref="T:System.ArgumentException">
+        <para>
+          <paramref name="brightnessLevel" /> is less than -255 or greater than 255 or <paramref name="contrastLevel" /></para>
+        <para>is less than -100 or greater than 100.</para>
+      </exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.BrightnessContrastEffect.BrightnessLevel" />
-    <member name="P:System.Drawing.Imaging.Effects.BrightnessContrastEffect.ContrastLevel" />
-    <member name="T:System.Drawing.Imaging.Effects.ColorBalanceEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.BrightnessContrastEffect.BrightnessLevel">
+      <summary>
+        <para>Gets an integer in the range -255 through 255 that specifies the brightness level.</para>
+      </summary>
+      <returns>An integer in the range -255 through 255 that specifies the brightness level.</returns>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.BrightnessContrastEffect.ContrastLevel">
+      <summary>Gets the contrast level.</summary>
+      <returns>An integer in the range -100 through 100 that specifies the contrast level.</returns>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.ColorBalanceEffect">
+      <summary>Adjusts the color balance of an image.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.ColorBalanceEffect.#ctor(System.Int32,System.Int32,System.Int32)">
-      <param name="cyanRed" />
-      <param name="magentaGreen" />
-      <param name="yellowBlue" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.ColorBalanceEffect" /> with the specified red, green, and blue values.</summary>
+      <param name="cyanRed">
+        <para>
+            Integer in the range -100 through 100 that specifies a change in the amount of red in the image. If the value
+            is 0, there is no change. As the value moves from 0 to 100, the amount of red in the image increases and the
+            amount of cyan decreases. As the value moves from 0 to -100, the amount of red in the image decreases and the
+            amount of cyan increases.</para>
+      </param>
+      <param name="magentaGreen">
+        <para>
+            Integer in the range -100 through 100 that specifies a change in the amount of green in the image. If the value
+            is 0, there is no change. As the value moves from 0 to 100, the amount of green in the image increases and the
+            amount of magenta decreases. As the value moves from 0 to -100, the amount of green in the image decreases and
+            and the amount of magenta increases.</para>
+      </param>
+      <param name="yellowBlue">
+        <para>
+            Integer in the range -100 through 100 that specifies a change in the amount of blue in the image. If the value
+            is 0, there is no change. As the value moves from 0 to 100, the amount of blue in the image increases and the
+            amount of yellow decreases. As the value moves from 0 to -100, the amount of blue in the image decreases and
+            the amount of yellow increases.</para>
+      </param>
+      <exception cref="T:System.ArgumentException">
+        <para>
+          <paramref name="cyanRed" />, <paramref name="magentaGreen" />, or <paramref name="yellowBlue" /> is less than</para>
+        <para>-100 or greater than 100.</para>
+      </exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.ColorBalanceEffect.CyanRed" />
-    <member name="P:System.Drawing.Imaging.Effects.ColorBalanceEffect.MagentaGreen" />
-    <member name="P:System.Drawing.Imaging.Effects.ColorBalanceEffect.YellowBlue" />
-    <member name="T:System.Drawing.Imaging.Effects.ColorCurveEffect" />
-    <member name="P:System.Drawing.Imaging.Effects.ColorCurveEffect.Channel" />
-    <member name="T:System.Drawing.Imaging.Effects.ColorLookupTableEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.ColorBalanceEffect.CyanRed">
+      <summary>Gets the amount of cyanRed in the image.</summary>
+      <returns>
+          The value can range from -100 through 100. As the value moves from 0 to 100, the amount of red in the image increases and the
+          amount of cyan decreases. As the value moves from 0 to -100, the amount of red in the image decreases and the
+          amount of cyan increases.</returns>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.ColorBalanceEffect.MagentaGreen">
+      <summary>Gets the amount of magentaGreen in the image</summary>
+      <returns>
+          The value can range from -100 through 100. As the value moves from 0 to 100, the amount of green in the image increases and the
+          amount of magenta decreases. As the value moves from 0 to -100, the amount of green in the image decreases and
+          and the amount of magenta increases.</returns>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.ColorBalanceEffect.YellowBlue">
+      <summary>Gets the amount of yellowBlue in the image.</summary>
+      <returns>
+          The value can range from -100 through 100. As the value moves from 0 to 100, the amount of blue in the image increases and the
+          amount of yellow decreases. As the value moves from 0 to -100, the amount of blue in the image decreases and
+          the amount of yellow increases.</returns>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.ColorCurveEffect">
+      <summary>Base class for several effects that can be applied to an image.</summary>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.ColorCurveEffect.Channel">
+      <summary>Gets the channel or channels that the effect is applied to.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.ColorLookupTableEffect">
+      <summary>Modifies the color components of an image.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.ColorLookupTableEffect.#ctor(System.Byte[],System.Byte[],System.Byte[],System.Byte[])">
-      <param name="redLookupTable" />
-      <param name="greenLookupTable" />
-      <param name="blueLookupTable" />
-      <param name="alphaLookupTable" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.ColorLookupTableEffect" /> with the specified red, green, blue, and alpha lookup tables.</summary>
+      <param name="redLookupTable">The lookup table for the red channel.</param>
+      <param name="greenLookupTable">The lookup table for the green channel.</param>
+      <param name="blueLookupTable">The lookup table for the blue channel.</param>
+      <param name="alphaLookupTable">The lookup table for the alpha channel.</param>
+      <exception cref="T:System.ArgumentException">A lookup table parameter is longer than 256 bytes.</exception>
     </member>
     <member name="M:System.Drawing.Imaging.Effects.ColorLookupTableEffect.#ctor(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte})">
-      <param name="redLookupTable" />
-      <param name="greenLookupTable" />
-      <param name="blueLookupTable" />
-      <param name="alphaLookupTable" />
+      <summary>Creates a new <xref data-throw-if-not-resolved="true" uid="System.Drawing.Imaging.Effects.ColorLookupTableEffect"></xref> with the specified red, green, blue, and alpha lookup tables.</summary>
+      <param name="redLookupTable">The lookup table for the red channel.</param>
+      <param name="greenLookupTable">The lookup table for the green channel.</param>
+      <param name="blueLookupTable">The lookup table for the blue channel.</param>
+      <param name="alphaLookupTable">The lookup table for the alpha channel.</param>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.ColorLookupTableEffect.AlphaLookupTable" />
-    <member name="P:System.Drawing.Imaging.Effects.ColorLookupTableEffect.BlueLookupTable" />
-    <member name="P:System.Drawing.Imaging.Effects.ColorLookupTableEffect.GreenLookupTable" />
-    <member name="P:System.Drawing.Imaging.Effects.ColorLookupTableEffect.RedLookupTable" />
-    <member name="T:System.Drawing.Imaging.Effects.ColorMatrixEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.ColorLookupTableEffect.AlphaLookupTable">
+      <summary>Gets the lookup table for the alpha channel.</summary>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.ColorLookupTableEffect.BlueLookupTable">
+      <summary>Gets the lookup table for the blue channel.</summary>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.ColorLookupTableEffect.GreenLookupTable">
+      <summary>Gets the lookup table for the green channel.</summary>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.ColorLookupTableEffect.RedLookupTable">
+      <summary>Gets the lookup table for the red channel.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.ColorMatrixEffect">
+      <summary>Adjusts the color matrix effect.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.ColorMatrixEffect.#ctor(System.Drawing.Imaging.ColorMatrix)">
-      <param name="matrix" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.ColorMatrixEffect" /> with the given <paramref name="matrix" />.</summary>
+      <param name="matrix">Color transform matrix.</param>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.ColorMatrixEffect.Matrix" />
-    <member name="T:System.Drawing.Imaging.Effects.ContrastCurveEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.ColorMatrixEffect.Matrix">
+      <summary>Gets the color transform matrix.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.ContrastCurveEffect">
+      <summary>Increases or decreases the contrast of an image.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.ContrastCurveEffect.#ctor(System.Drawing.Imaging.Effects.CurveChannel,System.Int32)">
-      <param name="channel" />
-      <param name="contrast" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.ContrastCurveEffect" /> with the given <paramref name="contrast" /> adjustment value.</summary>
+      <param name="channel">The channel or channels that the effect is applied to.</param>
+      <param name="contrast">
+        <para>
+            A value in the range of -100 through 100 that specifies the contrast adjustment value. A value of 0 specifies no change in contrast. Positive values
+            specify increased contrast and negative values specify decreased contrast.</para>
+      </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="contrast" /> is less than -100 or greater than 100.</exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.ContrastCurveEffect.Contrast" />
-    <member name="T:System.Drawing.Imaging.Effects.CurveChannel" />
-    <member name="F:System.Drawing.Imaging.Effects.CurveChannel.All" />
-    <member name="F:System.Drawing.Imaging.Effects.CurveChannel.Blue" />
-    <member name="F:System.Drawing.Imaging.Effects.CurveChannel.Green" />
-    <member name="F:System.Drawing.Imaging.Effects.CurveChannel.Red" />
-    <member name="T:System.Drawing.Imaging.Effects.DensityCurveEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.ContrastCurveEffect.Contrast">
+      <summary>A value in the range of -100 through 100 that specifies the contrast adjustment value.</summary>
+      <returns>The contrast adjustment value. A value of 0 specifies no change in contrast. Positive values specify increased contrast, and negative values specify decreased contrast.</returns>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.CurveChannel">
+      <summary>Specifies which color channels are affected by a <see cref="T:System.Drawing.Imaging.Effects.ColorCurveEffect" />.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.Effects.CurveChannel.All">
+      <summary>The color adjustment applies to all channels.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.Effects.CurveChannel.Blue">
+      <summary>The color adjustment applies only to the blue channel.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.Effects.CurveChannel.Green">
+      <summary>The color adjustment applies only to the green channel.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.Effects.CurveChannel.Red">
+      <summary>The color adjustment applies only to the red channel.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.DensityCurveEffect">
+      <summary>Simulates increasing or decreasing the film density of a photograph.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.DensityCurveEffect.#ctor(System.Drawing.Imaging.Effects.CurveChannel,System.Int32)">
-      <param name="channel" />
-      <param name="density" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.DensityCurveEffect" /> with the given <paramref name="density" />.</summary>
+      <param name="channel">The channel or channels that the effect is applied to.</param>
+      <param name="density">
+          A value in the range of -256 through 256 that specifies the density. A value of 0 specifies no change in density. Positive values specify
+          increased density (lighter picture) and negative values specify decreased density (darker picture).</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="density" /> is less than -256 or greater than 256.</exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.DensityCurveEffect.Density" />
-    <member name="T:System.Drawing.Imaging.Effects.Effect" />
+    <member name="P:System.Drawing.Imaging.Effects.DensityCurveEffect.Density">
+      <summary>
+          A value in the range of -256 through 256 that specifies the density. A value of 0 specifies no change in density. Positive values specify
+          increased density (lighter picture) and negative values specify decreased density (darker picture).</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.Effect">
+      <summary>Base class for all effects.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.Effect.Dispose">
       <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
     </member>
     <member name="M:System.Drawing.Imaging.Effects.Effect.Dispose(System.Boolean)">
-      <param name="disposing" />
+      <summary>Releases the unmanaged resources used by the <see cref="T:System.Drawing.Imaging.Effects.Effect" /> and optionally releases the managed resources.</summary>
+      <param name="disposing">
+        <see langword="true" /> to release both managed and unmanaged resources; <see langword="false" /> to release only unmanaged resources.</param>
     </member>
-    <member name="M:System.Drawing.Imaging.Effects.Effect.Finalize" />
-    <member name="T:System.Drawing.Imaging.Effects.ExposureCurveEffect" />
+    <member name="M:System.Drawing.Imaging.Effects.Effect.Finalize">
+      <summary>Cleans up Windows resources for this <see cref="T:System.Drawing.Imaging.Effects.Effect" />.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.ExposureCurveEffect">
+      <summary>Simulates increasing or decreasing the exposure of a photograph</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.ExposureCurveEffect.#ctor(System.Drawing.Imaging.Effects.CurveChannel,System.Int32)">
-      <param name="channel" />
-      <param name="exposure" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.ExposureCurveEffect" /> with the given <paramref name="exposure" /> adjustment.</summary>
+      <param name="channel">The channel or channels that the effect is applied to.</param>
+      <param name="exposure">
+          A value in the range of -256 through 256 that specifies the exposure. A value of 0 specifies no change in exposure. Positive values
+          specify increased exposure and negative values specify decreased exposure.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="exposure" /> is less than -256 or greater than 256.</exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.ExposureCurveEffect.Exposure" />
-    <member name="T:System.Drawing.Imaging.Effects.GrayScaleEffect" />
-    <member name="M:System.Drawing.Imaging.Effects.GrayScaleEffect.#ctor" />
-    <member name="T:System.Drawing.Imaging.Effects.HighlightCurveEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.ExposureCurveEffect.Exposure">
+      <summary>
+          Gets the exposure value.</summary>
+      <returns>
+          A value in the range of -256 through 256. A value of 0 specifies no change in exposure. Positive values
+          specify increased exposure and negative values specify decreased exposure.</returns>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.GrayScaleEffect">
+      <summary>Produces the effect that converts an image to grayscale.</summary>
+    </member>
+    <member name="M:System.Drawing.Imaging.Effects.GrayScaleEffect.#ctor">
+      <summary>Creates a <see cref="T:System.Drawing.Imaging.Effects.ColorMatrixEffect" /> that converts an image to grayscale.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.HighlightCurveEffect">
+      <summary>
+      Increases or decreases the value of a color channel if that channel already has a value that is above half
+      intensity.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.HighlightCurveEffect.#ctor(System.Drawing.Imaging.Effects.CurveChannel,System.Int32)">
-      <param name="channel" />
-      <param name="highlight" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.HighlightCurveEffect" /> with the given <paramref name="highlight" /> adjustment.</summary>
+      <param name="channel">The channel or channels that the effect is applied to.</param>
+      <param name="highlight">
+          A value in the range of -100 through 100 that specifies the highlight value. A value of 0 specifies no change. Positive values specify that the
+          light areas are made lighter, and negative values specify that the light areas are made darker.</param>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.HighlightCurveEffect.Highlight" />
-    <member name="T:System.Drawing.Imaging.Effects.InvertEffect" />
-    <member name="M:System.Drawing.Imaging.Effects.InvertEffect.#ctor" />
-    <member name="T:System.Drawing.Imaging.Effects.LevelsEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.HighlightCurveEffect.Highlight">
+      <summary>
+          Gets the highlight value.</summary>
+      <returns>
+          A value in the range of -100 through 100. A value of 0 specifies no change. Positive values specify that the
+          light areas are made lighter, and negative values specify that the light areas are made darker.</returns>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.InvertEffect">
+      <summary>Produces the effect that inverts the colors in an image.</summary>
+    </member>
+    <member name="M:System.Drawing.Imaging.Effects.InvertEffect.#ctor">
+      <summary>Creates a <see cref="T:System.Drawing.Imaging.Effects.ColorMatrixEffect" /> that inverts the colors in an image.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.LevelsEffect">
+      <summary>Adjusts the light, mid-tone, or dark areas of an image.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.LevelsEffect.#ctor(System.Int32,System.Int32,System.Int32)">
-      <param name="highlight" />
-      <param name="midtone" />
-      <param name="shadow" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.LevelsEffect" /> with the specified highlight, midtone, and shadow values.</summary>
+      <param name="highlight">
+          Integer in the range 0 through 100 that specifies which pixels should be lightened.</param>
+      <param name="midtone">
+          Integer in the range -100 through 100 that specifies how much to lighten or darken an image.</param>
+      <param name="shadow">
+          Integer in the range 0 through 100 that specifies which pixels should be darkened.</param>
+      <exception cref="T:System.ArgumentException">
+        <para>
+          <paramref name="highlight" /> or <paramref name="shadow" /> is less than 0 or greater than 100 or</para>
+        <para>
+          <paramref name="midtone" /> is less than -100 or greater than 100.</para>
+      </exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.LevelsEffect.Highlight" />
-    <member name="P:System.Drawing.Imaging.Effects.LevelsEffect.Midtone" />
-    <member name="P:System.Drawing.Imaging.Effects.LevelsEffect.Shadow" />
-    <member name="T:System.Drawing.Imaging.Effects.MidtoneCurveEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.LevelsEffect.Highlight">
+      <summary>Gets the highlight threshold.</summary>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.LevelsEffect.Midtone">
+      <summary>Gets the midtone adjustment.</summary>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.LevelsEffect.Shadow">
+      <summary>Gets the shadow threshold.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.MidtoneCurveEffect">
+      <summary>
+      Lightens or darkens an image.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.MidtoneCurveEffect.#ctor(System.Drawing.Imaging.Effects.CurveChannel,System.Int32)">
-      <param name="channel" />
-      <param name="midtone" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.MidtoneCurveEffect" /> with the given <paramref name="midtone" /> adjustment.</summary>
+      <param name="channel">The channel or channels that the effect is applied to.</param>
+      <param name="midtone">
+          A value in the range of -100 through 100 that specifies the midtone adjustment value. A value of 0 specifies no change. Positive values specify that the
+          midtones are made lighter, and negative values specify that the midtones are made darker.</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="midtone" /> is less than -100 or greater than 100.</exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.MidtoneCurveEffect.Midtone" />
-    <member name="T:System.Drawing.Imaging.Effects.SepiaEffect" />
-    <member name="M:System.Drawing.Imaging.Effects.SepiaEffect.#ctor" />
-    <member name="T:System.Drawing.Imaging.Effects.ShadowCurveEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.MidtoneCurveEffect.Midtone">
+      <summary>
+          Gets the midtone value.</summary>
+      <returns>
+          A value in the range of -100 through 100 that specifies the midtone adjustment value. A value of 0 specifies no change. Positive values specify that the
+          midtones are made lighter, and negative values specify that the midtones are made darker.</returns>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.SepiaEffect">
+      <summary>Produces the effect that converts an image to sepia.</summary>
+    </member>
+    <member name="M:System.Drawing.Imaging.Effects.SepiaEffect.#ctor">
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.ColorMatrixEffect" /> that converts an image to sepia.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.ShadowCurveEffect">
+      <summary>
+      Increases or decreases the value of a color channel if that channel already has a value that is below half
+      intensity.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.ShadowCurveEffect.#ctor(System.Drawing.Imaging.Effects.CurveChannel,System.Int32)">
-      <param name="channel" />
-      <param name="shadow" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.ShadowCurveEffect" /> with the given shadow adjustment value.</summary>
+      <param name="channel">The channel or channels that the effect is applied to.</param>
+      <param name="shadow">
+        <para>A value in the range of -100 through 100 that specifies the shadow adjustment value. A value of 0 specifies no change. Positive values specify that the</para>
+        <para>dark areas are made lighter, and negative values specify that the dark areas are made darker.</para>
+      </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="shadow" /> is less than -100 or greater than 100.</exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.ShadowCurveEffect.Shadow" />
-    <member name="T:System.Drawing.Imaging.Effects.SharpenEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.ShadowCurveEffect.Shadow">
+      <summary>
+          Gets the shadow value.</summary>
+      <returns>          
+          A value in the range of -100 through 100. A value of 0 specifies no change. Positive values specify that the
+          dark areas are made lighter, and negative values specify that the dark areas are made darker.</returns>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.SharpenEffect">
+      <summary>Sharpens an image.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.SharpenEffect.#ctor(System.Single,System.Single)">
-      <param name="radius" />
-      <param name="amount" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.SharpenEffect" /> with the specified sharpening values.</summary>
+      <param name="radius">
+          Real number that specifies the sharpening radius (the radius of the convolution kernel) in pixels. The radius
+          must be in the range 0 through 256. As the radius increases, more surrounding pixels are involved in calculating
+          the new value of a given pixel.</param>
+      <param name="amount">
+          Real number in the range 0 through 100 that specifies the amount of sharpening to be applied. A value of 0
+          specifies no sharpening. As the value of amount increases, the sharpness increases.</param>
+      <exception cref="T:System.ArgumentException">
+        <para>
+          <paramref name="radius" /> is less than 0 or greater than 256 or <paramref name="amount" /> is less than 0</para>
+        <para>or greater than 100.</para>
+      </exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.SharpenEffect.Amount" />
-    <member name="P:System.Drawing.Imaging.Effects.SharpenEffect.Radius" />
-    <member name="T:System.Drawing.Imaging.Effects.TintEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.SharpenEffect.Amount">
+      <summary>
+          Real number in the range 0 through 100 that specifies the amount of sharpening to be applied. A value of 0
+          specifies no sharpening. As the value of amount increases, the sharpness increases.</summary>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.SharpenEffect.Radius">
+      <summary>
+          Gets the the sharpening radius.</summary>
+      <returns>
+          Real number that specifies the sharpening radius (the radius of the convolution kernel) in pixels. The radius
+          must be in the range 0 through 256. As the radius increases, more surrounding pixels are involved in calculating
+          the new value of a given pixel.</returns>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.TintEffect">
+      <summary>Applies a tint to an image.</summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.TintEffect.#ctor(System.Drawing.Color,System.Int32)">
-      <param name="color" />
-      <param name="amount" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.TintEffect" /> with the specified hue adjustment.</summary>
+      <param name="color">The color to be applied to the image.</param>
+      <param name="amount">
+          Integer in the range -100 through 100 that specifies how much the hue (given by the hue parameter) is
+          strengthened or weakened. A value of 0 specifies no change. Positive values specify that the hue is
+          strengthened and negative values specify that the hue is weakened</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="amount" /> is less than -100 or greater than 100.</exception>
     </member>
     <member name="M:System.Drawing.Imaging.Effects.TintEffect.#ctor(System.Int32,System.Int32)">
-      <param name="hue" />
-      <param name="amount" />
+      <summary>Creates a new <xref data-throw-if-not-resolved="true" uid="System.Drawing.Imaging.Effects.TintEffect"></xref> with the specified hue adjustment.</summary>
+      <param name="hue">Integer in the range of 0 to 360 that specifies the hue to be strengthened or weakened.</param>
+      <param name="amount">Integer in the range -100 through 100 that specifies how much the hue (given by the hue parameter) is
+strengthened or weakened. A value of 0 specifies no change. Positive values specify that the hue is
+strengthened and negative values specify that the hue is weakened</param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="hue" /> is less than 0 or greater than 360.</exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="amount" /> is less than -100 or greater than 100.</exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.TintEffect.Amount" />
-    <member name="P:System.Drawing.Imaging.Effects.TintEffect.Hue" />
-    <member name="T:System.Drawing.Imaging.Effects.VividEffect" />
-    <member name="M:System.Drawing.Imaging.Effects.VividEffect.#ctor" />
-    <member name="T:System.Drawing.Imaging.Effects.WhiteSaturationCurveEffect" />
+    <member name="P:System.Drawing.Imaging.Effects.TintEffect.Amount">
+      <summary>
+          Gets the amount that the hue is strengthened or weakened.</summary>
+      <returns>
+          Integer in the range -100 through 100 that specifies how much the hue (given by the hue property) is
+          strengthened or weakened. A value of 0 specifies no change. Positive values specify that the hue is
+          strengthened and negative values specify that the hue is weakened</returns>
+    </member>
+    <member name="P:System.Drawing.Imaging.Effects.TintEffect.Hue">
+      <summary>Gets the hue value.</summary>
+      <returns>Integer in the range of 0 to 360 that specifies the hue to be strengthened or weakened.</returns>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.VividEffect">
+      <summary>Produces the effect that makes colors more vivid.</summary>
+    </member>
+    <member name="M:System.Drawing.Imaging.Effects.VividEffect.#ctor">
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.ColorMatrixEffect" /> that makes colors more vivid.</summary>
+    </member>
+    <member name="T:System.Drawing.Imaging.Effects.WhiteSaturationCurveEffect">
+      <summary>
+        <para>Sets the white saturation of an image. The white saturation is the point at which the lightest areas of the image</para>
+        <para>are converted to white.</para>
+      </summary>
+    </member>
     <member name="M:System.Drawing.Imaging.Effects.WhiteSaturationCurveEffect.#ctor(System.Drawing.Imaging.Effects.CurveChannel,System.Int32)">
-      <param name="channel" />
-      <param name="whiteSaturation" />
+      <summary>Creates a new <see cref="T:System.Drawing.Imaging.Effects.WhiteSaturationCurveEffect" /> with the specified white saturation value.</summary>
+      <param name="channel">The channel or channels that the effect is applied to.</param>
+      <param name="whiteSaturation">
+          A value of t specifies that the interval [0, t] is mapped linearly to the interval [0, 255]. For example, if</param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="whiteSaturation" /> was less than 1 or greater than 255.</exception>
     </member>
-    <member name="P:System.Drawing.Imaging.Effects.WhiteSaturationCurveEffect.WhiteSaturation" />
+    <member name="P:System.Drawing.Imaging.Effects.WhiteSaturationCurveEffect.WhiteSaturation">
+      <summary>
+          Gets the white saturation value.</summary>
+      <returns>
+          A value of t specifies that the interval [0, t] is mapped linearly to the interval [0, 255]. For example, if <see cref="P:System.Drawing.Imaging.Effects.WhiteSaturationCurveEffect.WhiteSaturation" /> 
+          is equal to 240, then color channel values in the interval [0, 240] are adjusted so that they spread out over the interval [0, 255]. Color channel values greater than 240 are set to 255.</returns>
+    </member>
     <member name="T:System.Drawing.Imaging.EmfPlusRecordType">
       <summary>Specifies the methods available for use with a metafile to read and write graphic commands.</summary>
     </member>
@@ -8105,7 +8582,7 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="encoder">An <see cref="T:System.Drawing.Imaging.Encoder" /> object that encapsulates the globally unique identifier of the parameter category.</param>
       <param name="numberValues">An integer that specifies the number of values stored in the <see cref="T:System.Drawing.Imaging.EncoderParameter" /> object. The <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> property is set to this value.</param>
       <param name="type">A member of the <see cref="T:System.Drawing.Imaging.EncoderParameterValueType" /> enumeration that specifies the data type of the values stored in the <see cref="T:System.Drawing.Imaging.EncoderParameter" /> object. The <see cref="T:System.Type" /> and <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> properties are set to this value.</param>
-      <param name="value">A pointer to an array of values of the type specified by the <paramref name="Type" /> parameter.</param>
+      <param name="value">A pointer to an array of values of the type specified by the <paramref name="type" /> parameter.</param>
     </member>
     <member name="M:System.Drawing.Imaging.EncoderParameter.#ctor(System.Drawing.Imaging.Encoder,System.Int32,System.Int32,System.Int32,System.Int32)">
       <summary>Initializes a new instance of the <see cref="T:System.Drawing.Imaging.EncoderParameter" /> class with the specified <see cref="T:System.Drawing.Imaging.Encoder" /> object and four, 32-bit integers. The four integers represent a range of fractions. The first two integers represent the smallest fraction in the range, and the remaining two integers represent the largest fraction in the range. Sets the <see cref="P:System.Drawing.Imaging.EncoderParameter.ValueType" /> property to <see cref="F:System.Drawing.Imaging.EncoderParameterValueType.ValueTypeRationalRange" />, and sets the <see cref="P:System.Drawing.Imaging.EncoderParameter.NumberOfValues" /> property to 1.</summary>
@@ -8439,10 +8916,12 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="map">An array of <see cref="T:System.Drawing.Imaging.ColorMap" /> objects.</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetBrushRemapTable(System.ReadOnlySpan{System.Drawing.Imaging.ColorMap})">
-      <param name="map" />
+      <summary>Sets the color-remap table for a specified category.</summary>
+      <param name="map">A series of color pairs mapping an existing color to a new color.</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetBrushRemapTable(System.ReadOnlySpan{System.ValueTuple{System.Drawing.Color,System.Drawing.Color}})">
-      <param name="map" />
+      <summary>Sets the color-remap table for a specified category.</summary>
+      <param name="map">A series of color pairs mapping an existing color to a new color.</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetColorKey(System.Drawing.Color,System.Drawing.Color,System.Drawing.Imaging.ColorAdjustType)">
       <summary>Sets the color key (transparency range) for a specified category.</summary>
@@ -8523,12 +9002,14 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="colorProfileFilename">The path name of a color-profile file. If the color-profile file is in the %SystemRoot%\System32\Spool\Drivers\Color directory, this parameter can be the file name. Otherwise, this parameter must be the fully qualified path name.</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.Drawing.Imaging.ColorAdjustType,System.ReadOnlySpan{System.Drawing.Imaging.ColorMap})">
-      <param name="type" />
-      <param name="map" />
+      <summary>Sets the color-remap table for a specified category.</summary>
+      <param name="type">An element of <see cref="T:System.Drawing.Imaging.ColorAdjustType" /> that specifies the category for which the color-remap table is set.</param>
+      <param name="map">A series of color pairs mapping an existing color to a new color.</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.Drawing.Imaging.ColorAdjustType,System.ReadOnlySpan{System.ValueTuple{System.Drawing.Color,System.Drawing.Color}})">
-      <param name="type" />
-      <param name="map" />
+      <summary>Sets the color-remap table for a specified category.</summary>
+      <param name="type">An element of <xref data-throw-if-not-resolved="true" uid="System.Drawing.Imaging.ColorAdjustType"></xref> that specifies the category for which the color-remap table is set.</param>
+      <param name="map">A series of color pairs mapping an existing color to a new color.</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.Drawing.Imaging.ColorMap[],System.Drawing.Imaging.ColorAdjustType)">
       <summary>Sets the color-remap table for a specified category.</summary>
@@ -8540,10 +9021,12 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <param name="map">An array of color pairs of type <see cref="T:System.Drawing.Imaging.ColorMap" />. Each color pair contains an existing color (the first value) and the color that it will be mapped to (the second value).</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.ReadOnlySpan{System.Drawing.Imaging.ColorMap})">
-      <param name="map" />
+      <summary>Sets the color-remap table for a specified category.</summary>
+      <param name="map">An array of color pairs of type <xref data-throw-if-not-resolved="true" uid="System.Drawing.Imaging.ColorMap"></xref>. Each color pair contains an existing color (the first value) and the color that it will be mapped to (the second value).</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetRemapTable(System.ReadOnlySpan{System.ValueTuple{System.Drawing.Color,System.Drawing.Color}})">
-      <param name="map" />
+      <summary>Sets the color-remap table for a specified category.</summary>
+      <param name="map">An array of color pairs of type <xref data-throw-if-not-resolved="true" uid="System.Drawing.Imaging.ColorMap"></xref>. Each color pair contains an existing color (the first value) and the color that it will be mapped to (the second value).</param>
     </member>
     <member name="M:System.Drawing.Imaging.ImageAttributes.SetThreshold(System.Single,System.Drawing.Imaging.ColorAdjustType)">
       <summary>Sets the threshold (transparency range) for a specified category.</summary>
@@ -8780,7 +9263,7 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
       <summary>Specifies that a portion of the image is locked for reading or writing.</summary>
     </member>
     <member name="F:System.Drawing.Imaging.ImageLockMode.UserInputBuffer">
-      <summary>Specifies that the buffer used for reading or writing pixel data is allocated by the user. If this flag is set, the <paramref name="flags" /> parameter of the <see cref="Overload:System.Drawing.Bitmap.LockBits" /> method serves as an input parameter (and possibly as an output parameter). If this flag is cleared, then the <paramref name="flags" /> parameter serves only as an output parameter.</summary>
+      <summary>Specifies that the buffer used for reading or writing pixel data is allocated by the user. If this flag is set, the <paramref name="bitmapData" /> parameter of the <see cref="M:System.Drawing.Bitmap.LockBits(System.Drawing.Rectangle,System.Drawing.Imaging.ImageLockMode,System.Drawing.Imaging.PixelFormat,System.Drawing.Imaging.BitmapData)" /> method serves as an input parameter (and possibly as an output parameter). If this flag is cleared, then the <paramref name="bitmapData" /> parameter serves only as an output parameter.</summary>
     </member>
     <member name="F:System.Drawing.Imaging.ImageLockMode.WriteOnly">
       <summary>Specifies that a portion of the image is locked for writing.</summary>
@@ -9258,16 +9741,64 @@ The <see cref="T:System.Drawing.Graphics" /> object has a transform applied othe
     <member name="F:System.Drawing.Imaging.PaletteFlags.HasAlpha">
       <summary>Alpha data.</summary>
     </member>
-    <member name="T:System.Drawing.Imaging.PaletteType" />
-    <member name="F:System.Drawing.Imaging.PaletteType.Custom" />
-    <member name="F:System.Drawing.Imaging.PaletteType.FixedBlackAndWhite" />
-    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone125" />
-    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone216" />
-    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone252" />
-    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone256" />
-    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone27" />
-    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone64" />
-    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone8" />
+    <member name="T:System.Drawing.Imaging.PaletteType">
+      <summary>Specifies color palette types.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.PaletteType.Custom">
+      <summary>An arbitrary custom palette specified by the caller.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.PaletteType.FixedBlackAndWhite">
+      <summary>A palette that has two colors. This palette type is suitable for bitmaps that store 1 bit per pixel.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone125">
+      <summary>
+          A palette based on five intensities each for the red, green, and blue channels. Also contains the 16 colors of
+          the system palette. Eight of the 16 system palette colors are among the 125 five-intensity combinations of red,
+          green, and blue, so the total number of colors in the palette is 133. If the palette also includes the transparent
+          color, the total number of colors is 134.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone216">
+      <summary>
+          A palette based on six intensities each for the red, green, and blue channels. Also contains the 16 colors of
+          the system palette. Eight of the 16 system palette colors are among the 216 six-intensity combinations of red,
+          green, and blue, so the total number of colors in the palette is 224. If the palette also includes the transparent
+          color, the total number of colors is 225. This palette is sometimes called the Windows halftone palette or
+          the Web palette.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone252">
+      <summary>
+          A palette based on 6 intensities of red, 7 intensities of green, and 6 intensities of blue. The system palette
+          is not included. The total number of colors is 252. If the palette also includes the transparent color, the
+          total number of colors is 253.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone256">
+      <summary>
+          A palette based on 8 intensities of red, 8 intensities of green, and 4 intensities of blue. The system palette
+          is not included. The total number of colors is 256. If the transparent color is included in this palette, it
+          must replace one of the RGB combinations.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone27">
+      <summary>
+          A palette based on three intensities each for the red, green, and blue channels. Also contains the 16 colors of
+          the system palette. Eight of the 16 system palette colors are among the 27 three-intensity combinations of red,
+          green, and blue, so the total number of colors in the palette is 35. If the palette also includes the transparent
+          color, the total number of colors is 36.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone64">
+      <summary>
+          A palette based on four intensities each for the red, green, and blue channels. Also contains the 16 colors of
+          the system palette. Eight of the 16 system palette colors are among the 64 four-intensity combinations of red,
+          green, and blue, so the total number of colors in the palette is 72. If the palette also includes the transparent
+          color, the total number of colors is 73.</summary>
+    </member>
+    <member name="F:System.Drawing.Imaging.PaletteType.FixedHalftone8">
+      <summary>
+        <para>A palette based on two intensities each (off or full) for the red, green, and blue channels. Also contains the</para>
+        <para>16 colors of the system palette. Because all eight of the on/off combinations of red, green, and blue are</para>
+        <para>already in the system palette, this palette is the same as the system palette. This palette type is suitable</para>
+        <para>for bitmaps that store 4 bits per pixel.</para>
+      </summary>
+    </member>
     <member name="T:System.Drawing.Imaging.PixelFormat">
       <summary>Specifies the format of the color data for each pixel in the image.</summary>
     </member>
